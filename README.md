@@ -25,6 +25,9 @@ The number of the lesson, beginning at 0 being the introduction.
 ### Lesson title
 The title of the lesson, with reference to the cultural theme (e.g. Cities in Covtle)
 
+### Exercise number
+The number of the exercise, beginning at 0 for the first exercise in the lesson.
+
 ### Exercise title
 The title of the specific exercise (e.g. Fill in the blank).
 
