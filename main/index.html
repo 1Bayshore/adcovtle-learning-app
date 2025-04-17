@@ -7,11 +7,12 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="user-login">
+        <form id="user-login" method="post" action="/admin.html">
             <label for="username">Username: </label>
-            <input type="text" id="username">
+            <input type="text" id="username" name="username">
             <button onclick="login()">Switch to user</button>
-        </div>
+            <button type="submit">Open admin panel</button>
+        </form>
         <h1 id="lesson-title"></h1>
         <div class="progress-bar">
             <label for="lesson-progress-bar">Lesson progress:</label>

@@ -2,6 +2,10 @@
     display: none;
 }
 
+.denied {
+    color: red;
+}
+
 body {
     padding-left: 20%;
     padding-right: 20%;
