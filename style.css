@@ -9,6 +9,10 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#user-login {
+    font-size: smaller;
+}
+
 progress {
     width: 100%;
     /*color: #77f6ff;*/

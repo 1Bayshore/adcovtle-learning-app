@@ -24,6 +24,7 @@ function getCookie(cname) {
 // All other code
 
 let lessonData = {};
+let currentUser = "default";
 
 async function fetchData() {
     let response = await fetch('lessons.json');
@@ -250,8 +251,8 @@ function nextExercise() {
     if (newLesson == oldLessonMax) {
         displayCompletionScreen();
     } else {
-        setCookie('currentLesson', newLesson, 365);
-        setCookie('currentExercise', newExercise, 365);
+        setCookie(currentUser + 'currentLesson', newLesson, 365);
+        setCookie(currentUser + 'currentExercise', newExercise, 365);
         populateFields(newLesson, newExercise);
     }
 }
@@ -259,16 +260,31 @@ function nextExercise() {
 function resetProgress() {
     let confirmation = confirm("Are you sure you want to reset your progress? This cannot be undone.");
     if (confirmation) {
-        setCookie('currentLesson', 0, 365);
-        setCookie('currentExercise', 0, 365);
+        setCookie(currentUser + 'currentLesson', 0, 365);
+        setCookie(currentUser + 'currentExercise', 0, 365);
         populateFields(0, 0);
     }
 }
 
+function login() {
+    currentUser = document.getElementById('username').value;
+    setCookie('currentUser', currentUser, 365);
+    let prevLesson = Number(getCookie(currentUser + 'currentLesson')); // will return 0 if unset
+    let prevExercise = Number(getCookie(currentUser + 'currentExercise')); // same as above
+    populateFields(prevLesson, prevExercise); // return to the previous lesson
+    alert('Switched to user ' + currentUser);
+}
+
 async function loadPage() {
     await fetchData();
-    let prevLesson = Number(getCookie('currentLesson')); // will return 0 if unset
-    let prevExercise = Number(getCookie('currentExercise')); // same as above
+    currentUser = getCookie('currentUser');
+    if (currentUser == "") {
+        currentUser = "default";
+        alert('This site uses cookies to maintain your progress and distinguish you from other visitors. By continuing to use this site you agree to the use of cookies.')
+    }
+    document.getElementById('username').value = currentUser;
+    let prevLesson = Number(getCookie(currentUser + 'currentLesson')); // will return 0 if unset
+    let prevExercise = Number(getCookie(currentUser + 'currentExercise')); // same as above
     populateFields(prevLesson, prevExercise); // return to the previous lesson
 }
 
