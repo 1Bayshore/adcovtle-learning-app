@@ -79,7 +79,6 @@ function populateFields(lesson, exercise) {
         document.getElementById('exercise-type').value = "flashcard";
         document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;
         document.getElementById('exercise-answer').classList.add('hidden');
-        document.getElementById('next-button').classList.add('hidden');
         document.getElementById('exercise-answer').innerText = lessonData[lesson][exercise].exerciseAnswer;
     } else if (lessonData[lesson][exercise].exerciseType == "fill-in-the-blank") {
         document.getElementById('exercise-type').value = "fill-in-the-blank";
@@ -166,6 +165,29 @@ function populateFields(lesson, exercise) {
 
         document.getElementById('leftBox').classList.add('draggableContainer');
         document.getElementById('rightBox').classList.add('draggableContainer');
+    } else if (lessonData[lesson][exercise].exerciseType == "multiple-choice") {
+        document.getElementById('exercise-type').value = "multiple-choice";
+        document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;
+        document.getElementById('exercise-answer').classList.remove('hidden');
+
+        let formEle = document.createElement('form');
+        formEle.id = 'buttonForm';
+
+        for (let i in lessonData[lesson][exercise].exerciseAnswer) {
+            let iEle = document.createElement('input');
+            iEle.type = 'radio';
+            iEle.name = 'radioButton';
+            iEle.value = lessonData[lesson][exercise].exerciseAnswer[i];
+
+            let iEleLabel = document.createElement('label');
+            iEleLabel.for = iEle;
+            iEleLabel.innerText = i;
+
+            formEle.appendChild(iEle);
+            formEle.appendChild(iEleLabel);
+            formEle.appendChild(document.createElement('br'));
+        }
+        document.getElementById('exercise-answer').appendChild(formEle);
     }
 }
 
@@ -190,9 +212,19 @@ function submitExercise() {
         if (allCorrect) {
             document.getElementById('next-button').classList.remove('hidden');
         }
-    }  else if (exerciseType == "matching") {
+    } else if (exerciseType == "matching") {
         if (document.getElementsByClassName('completed').length == document.getElementsByClassName('draggable').length) {
             // all draggable elements are marked as completed, so user has matched them all
+            document.getElementById('next-button').classList.remove('hidden');
+        }
+    } else if (exerciseType == "multiple-choice") {
+        let valueIsTrue = false;
+        document.getElementsByName('radioButton').forEach( function (i) {
+            if (i.checked && i.value == "true") { // yes this is supposed to be a string
+                valueIsTrue = true;
+            }
+        });
+        if (valueIsTrue) {
             document.getElementById('next-button').classList.remove('hidden');
         }
     }

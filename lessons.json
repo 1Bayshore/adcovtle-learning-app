@@ -29,6 +29,25 @@
             "exerciseType": "matching",
             "exerciseQuestion": ["this", "matches", "with", "that"],
             "exerciseAnswer": ["this", "matches", "with", "that"]
+        },
+        "4": {
+            "exerciseNumber": 4,
+            "exerciseTitle": "Multiple choice exercises",
+            "exerciseType": "multiple-choice",
+            "exerciseQuestion": "Mutliple choice questions will look like this. (Hint: try 'C')",
+            "exerciseAnswer": {
+                "A": false,
+                "B": false,
+                "C": true,
+                "D": false
+            }
+        },
+        "5": {
+            "exerciseNumber": 5,
+            "exerciseTitle": "Finished showing the tutorial",
+            "exerciseType": "flashcard",
+            "exerciseQuestion": "You've finished the tutorial!",
+            "exerciseAnswer": "Let's get started!"
         }
     }
 }
