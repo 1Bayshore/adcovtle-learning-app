@@ -49,5 +49,37 @@
             "exerciseQuestion": "You've finished the tutorial!",
             "exerciseAnswer": "Let's get started!"
         }
+    },
+    "1": {
+        "lessonNumber": 1,
+        "lessonTitle": "Welcome to Covtle!",
+        "0": {
+            "exerciseNumber": 0,
+            "exerciseTitle": "A place to stay",
+            "exerciseType": "flashcard",
+            "exerciseQuestion": "You're stepping off the train, and passing through the smoke-filled station to look for your hotel. Gemstone-studded buildings line the street you walk along, through crowds of people.\n\nYou spot a sign reading «Lahoceþta ad larivlé ad Glisng». Good, that's where you were going to stay. You walk up to the front, and someone says to you, «Era! Va psote þjedo.» That means...",
+            "exerciseAnswer": "'Hello! You are here.' «Era» means 'hello', «va» means 'you', «psote» means 'am/is/are', and «þjedo» means 'here'."
+        },
+        "1": {
+            "exerciseNumber": 1,
+            "exerciseTitle": "Welcome in",
+            "exerciseType": "fill-in-the-blank",
+            "exerciseQuestion": "You follow the person into the hotel. The interior, like the exterior, is gem-studded. The gold trim is particularly evident. You walk up to the desk and say, in your best attempt at Adcovtle, «__blank__! (hello) Ma papalavi english.»",
+            "exerciseAnswer": ["era"]
+        },
+        "2": {
+            "exerciseNumber": 2,
+            "exerciseTitle": "An unexpected item",
+            "exerciseType": "flashcard",
+            "exerciseQuestion": "The clerk behind the desk smiles. 'I speak a little English,' they say. 'Welcome to the hotel.' They pull out a small golden key. 'Here is your room key,' they say. 'Room 2.' Then they pull out an envelope. 'Here is the letter for you,' they say.\n\n'A letter?' you ask, surprised.\n\n'Yes,' the clerk says. 'It just arrived this morning.'\n\nYou take the key and letter. «Tle,» you say to the clerk. That means...",
+            "exerciseAnswer": "'Thanks!' («Tle» is not considered particularly casual or formal.)"
+        },
+        "3": {
+            "exerciseNumber": 3,
+            "exerciseTitle": "Metlevda",
+            "exerciseType": "flashcard",
+            "exerciseQuestion": "You walk down the hallway a short distance to room 2. You unlock the door and enter. A large window looks out over the river. You close the door, set your suitcase aside, and open the letter.\n\nThe letter reads:\n'Era,\n\nPlease meet me at Laticomisra ad Emtlanðo at 15:00. There has been a change of plans.\n\nMetlevda,\nTlanida'\n\nYou check your watch. It's almost 15:00, you need to leave right away.",
+            "exerciseAnswer": "«Metlevda» means 'sorry', «laticomisra» means 'café', «ad» means 'of', and «Emtlanðo» is a name."
+        }
     }
 }
