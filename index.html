@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intital-scale=1">
+        <title>Learn Adcovtle online!</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1 id="lesson-title"></h1>
+        <div class="progress-bar">
+            <label for="lesson-progress-bar">Lesson progress:</label>
+            <progress id="lesson-progress-bar"></progress>
+        </div>
+        <h2 id="exercise-title"></h2>
+        <div class="progress-bar">
+            <label for="exercise-progress-bar">Exercise progress:</label>
+            <progress id="exercise-progress-bar"></progress>
+        </div>
+        <input type="hidden" id="exercise-type">
+        <div id="exercise-question"></div>
+        <button id="exercise-submit" onclick="submitExercise()">Check answer</button>
+        <div id="exercise-answer"></div>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>

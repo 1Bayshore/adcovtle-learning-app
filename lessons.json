@@ -1,0 +1,13 @@
+{
+    "0": {
+        "lessonNumber": 0,
+        "lessonTitle": "Introduction to Adcovtle Learning App!",
+        "0": {
+            "exerciseNumber": 0,
+            "exerciseTitle": "Welcome to Adcovtle Learning App!",
+            "exerciseType": "flashcard",
+            "exerciseQuestion": "We're so glad to have you here! Click the 'Check answer' button to learn more.",
+            "exerciseAnswer": "The Adcovtle Learning App was created in 2025 by Johanna Luebke."
+        }
+    }
+}
