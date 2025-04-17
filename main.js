@@ -1,3 +1,28 @@
+// Cookie handing code, from https://www.w3schools.com/js/js_cookies.asp
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    let expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+// All other code
+
 let lessonData = {};
 
 async function fetchData() {
@@ -35,6 +60,7 @@ function populateFields(lesson, exercise) {
         document.getElementById('exercise-type').value = "flashcard";
         document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;
         document.getElementById('exercise-answer').classList.add('hidden');
+        document.getElementById('next-button').classList.add('hidden');
         document.getElementById('exercise-answer').innerText = lessonData[lesson][exercise].exerciseAnswer;
     }
 }
@@ -68,13 +94,26 @@ function nextExercise() {
     if (newLesson == oldLessonMax) {
         displayCompletionScreen();
     } else {
+        setCookie('currentLesson', newLesson, 365);
+        setCookie('currentExercise', newExercise, 365);
         populateFields(newLesson, newExercise);
+    }
+}
+
+function resetProgress() {
+    let confirmation = confirm("Are you sure you want to reset your progress? This cannot be undone.");
+    if (confirmation) {
+        setCookie('currentLesson', 0, 365);
+        setCookie('currentExercise', 0, 365);
+        populateFields(0, 0);
     }
 }
 
 async function loadPage() {
     await fetchData();
-    populateFields(0, 0); //initialize on the first exercise
+    let prevLesson = Number(getCookie('currentLesson')); // will return 0 if unset
+    let prevExercise = Number(getCookie('currentExercise')); // same as above
+    populateFields(prevLesson, prevExercise); // return to the previous lesson
 }
 
 loadPage();

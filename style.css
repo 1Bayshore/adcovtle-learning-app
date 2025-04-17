@@ -13,3 +13,22 @@ progress {
     width: 100%;
     /*color: #77f6ff;*/
 }
+
+button {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: 1px solid black;
+    font-size: inherit;
+}
+
+button:active {
+    background-color: #b3b3b3;
+}
+
+#resetButton {
+    background-color: red;
+}
+
+#resetButton:active {
+    background-color: darkred;
+}
