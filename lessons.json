@@ -8,6 +8,13 @@
             "exerciseType": "flashcard",
             "exerciseQuestion": "We're so glad to have you here! Click the 'Check answer' button to learn more.",
             "exerciseAnswer": "The Adcovtle Learning App was created in 2025 by Johanna Luebke."
+        },
+        "1": {
+            "exerciseNumber": 1,
+            "exerciseTitle": "How the Adcovtle Learning App works",
+            "exerciseType": "flashcard",
+            "exerciseQuestion": "The Adcovtle learning app contains a variety of exercises for beginners through intermediate learners. These include flashcards, multiple choice exercises, writing practice, and translations.",
+            "exerciseAnswer": "This introduction is presented in the form of flashcards. Next, we will demonstrate some other types of exercises."
         }
     }
 }

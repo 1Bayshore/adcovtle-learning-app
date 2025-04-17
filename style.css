@@ -1,3 +1,15 @@
 .hidden {
     display: none;
 }
+
+body {
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #ffc272;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+progress {
+    width: 100%;
+    /*color: #77f6ff;*/
+}

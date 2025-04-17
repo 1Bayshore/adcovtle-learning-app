@@ -15,7 +15,7 @@ function populateFields(lesson, exercise) {
         if (Number.isNaN(numI)) {
             continue;
         }
-        maxLessonNumber = Math.max(numI, maxLessonNumber);
+        maxLessonNumber = Math.max(numI, maxLessonNumber) + 1; // plus because of 0-indexing
     }
     document.getElementById('lesson-progress-bar').max = maxLessonNumber;
 
@@ -27,7 +27,7 @@ function populateFields(lesson, exercise) {
         if (Number.isNaN(numI)) {
             continue;
         }
-        maxExerciseNumber = Math.max(numI, maxExerciseNumber);
+        maxExerciseNumber = Math.max(numI, maxExerciseNumber) + 1; // plus because of 0-indexing
     }
     document.getElementById('exercise-progress-bar').max = maxExerciseNumber;
 
@@ -44,6 +44,31 @@ function submitExercise() {
 
     if (exerciseType == "flashcard") {
         document.getElementById('exercise-answer').classList.toggle('hidden');
+        document.getElementById('next-button').classList.toggle('hidden');
+    }
+}
+
+function displayCompletionScreen() {
+    alert('Congratulations! You have finished all of the lessons. Check back for more lessons soon!');
+}
+
+function nextExercise() {
+    let oldLesson = document.getElementById('lesson-progress-bar').value;
+    let oldExercise = document.getElementById('exercise-progress-bar').value;
+    let oldLessonMax = document.getElementById('lesson-progress-bar').max;
+    let oldExerciseMax = document.getElementById('exercise-progress-bar').max;
+
+    let newLesson = oldLesson;
+    let newExercise = oldExercise + 1;
+    if (newExercise == oldExerciseMax) {
+        newExercise = 0;
+        newLesson = oldLesson + 1;
+    }
+
+    if (newLesson == oldLessonMax) {
+        displayCompletionScreen();
+    } else {
+        populateFields(newLesson, newExercise);
     }
 }
 
