@@ -20,8 +20,15 @@
             "exerciseNumber": 2,
             "exerciseTitle": "Fill in the blank exercises",
             "exerciseType": "fill-in-the-blank",
-            "exerciseQuestion": "You will see __blank__ in the exercise to fill in. Type in the missing word.",
+            "exerciseQuestion": "You will see __blank__ in the exercise to fill in. Type in the missing word. (Hint: try 'blanks')",
             "exerciseAnswer": ["blanks"]
+        },
+        "3": {
+            "exerciseNumber": 3,
+            "exerciseTitle": "Matching exercises",
+            "exerciseType": "matching",
+            "exerciseQuestion": ["this", "matches", "with", "that"],
+            "exerciseAnswer": ["this", "matches", "with", "that"]
         }
     }
 }

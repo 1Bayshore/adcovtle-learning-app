@@ -31,6 +31,21 @@ async function fetchData() {
     lessonData = data;
 }
 
+function matchingDropCheck(e) {
+    let srcId = e.dataTransfer.getData("Text");
+    let targetId = e.target.id;
+    if (srcId.replace('question', '').replace('answer', '') == targetId.replace('question', '').replace('answer', '')) {
+        document.getElementById(srcId).classList.add('completed');
+        document.getElementById(targetId).classList.add('completed');
+    }
+
+    e.preventDefault();
+}
+
+function matchingDragStart(e) {
+    e.dataTransfer.setData("Text", e.target.id);
+}
+
 function populateFields(lesson, exercise) {
     document.getElementById('lesson-title').innerText = lessonData[lesson].lessonTitle;
     document.getElementById('lesson-progress-bar').value = lessonData[lesson].lessonNumber;
@@ -55,6 +70,10 @@ function populateFields(lesson, exercise) {
         maxExerciseNumber = Math.max(numI, maxExerciseNumber) + 1; // plus because of 0-indexing
     }
     document.getElementById('exercise-progress-bar').max = maxExerciseNumber;
+
+    document.getElementById('exercise-question').innerText = ""; // clear out these fields before setting their new values
+    document.getElementById('exercise-answer').innerText = "";
+    document.getElementById('next-button').classList.add('hidden');
 
     if (lessonData[lesson][exercise].exerciseType == "flashcard") {
         document.getElementById('exercise-type').value = "flashcard";
@@ -90,6 +109,63 @@ function populateFields(lesson, exercise) {
             answerE.value = lessonData[lesson][exercise].exerciseAnswer[i];
             document.getElementById('exercise-answer').appendChild(answerE);
         }
+    } else if (lessonData[lesson][exercise].exerciseType == "matching") {
+        document.getElementById('exercise-type').value = "matching";
+        document.getElementById('exercise-question').innerText = "Match the items on the left with the items on the right:"
+
+        document.getElementById('exercise-answer').classList.remove('hidden');
+
+        let leftBox = document.createElement('div');
+        leftBox.id = 'leftBox';
+
+        let rightBox = document.createElement('div');
+        rightBox.id = 'rightBox';
+
+        let boxBox = document.createElement('div');
+        boxBox.id = 'boxBox';
+
+        boxBox.ondragover = function (e) {
+            e.preventDefault();
+        }
+        
+        document.getElementById('exercise-answer').appendChild(boxBox);
+        document.getElementById('boxBox').appendChild(leftBox);
+        document.getElementById('boxBox').appendChild(rightBox);
+
+        for (let i in lessonData[lesson][exercise].exerciseQuestion) {
+            let iEle = document.createElement('span');
+            iEle.draggable = true;
+            iEle.id = 'question' + i;
+            iEle.classList.add('draggable');
+            iEle.innerText = lessonData[lesson][exercise].exerciseQuestion[i];
+            iEle.ondrop = matchingDropCheck;
+            iEle.ondragstart = matchingDragStart;
+            document.getElementById('leftBox').appendChild(iEle);
+            document.getElementById('leftBox').appendChild(document.createElement('br'));
+        }
+
+        let answerArray = [];
+        for (let i in lessonData[lesson][exercise].exerciseAnswer) {
+            let iEle = document.createElement('span');
+            iEle.draggable = true;
+            iEle.id = 'answer' + i;
+            iEle.classList.add('draggable');
+            iEle.innerText = lessonData[lesson][exercise].exerciseAnswer[i];
+            iEle.ondrop = matchingDropCheck;
+            iEle.ondragstart = matchingDragStart;
+            answerArray.push(iEle);
+        }
+        
+        let fullAnswerArrayLength = answerArray.length;
+        for (let i = 0; i < fullAnswerArrayLength; i++) {
+            let appendingEle = answerArray[Math.floor(Math.random() * answerArray.length)];
+            answerArray.splice(answerArray.indexOf(appendingEle), 1);
+            document.getElementById('rightBox').appendChild(appendingEle);
+            document.getElementById('rightBox').appendChild(document.createElement('br'));
+        }
+
+        document.getElementById('leftBox').classList.add('draggableContainer');
+        document.getElementById('rightBox').classList.add('draggableContainer');
     }
 }
 
@@ -112,6 +188,11 @@ function submitExercise() {
             }
         }
         if (allCorrect) {
+            document.getElementById('next-button').classList.remove('hidden');
+        }
+    }  else if (exerciseType == "matching") {
+        if (document.getElementsByClassName('completed').length == document.getElementsByClassName('draggable').length) {
+            // all draggable elements are marked as completed, so user has matched them all
             document.getElementById('next-button').classList.remove('hidden');
         }
     }

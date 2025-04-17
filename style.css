@@ -21,6 +21,19 @@ button {
     font-size: inherit;
 }
 
+button:active {
+    background-color: #b3b3b3;
+}
+
+#resetButton {
+    background-color: red;
+}
+
+#resetButton:active {
+    background-color: darkred;
+}
+
+
 input {
     background-color: #ffffff;
     font-family: inherit;
@@ -32,14 +45,30 @@ input {
     color: red;
 }
 
-button:active {
+#boxBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.draggable {
+    border: 1px solid black;
+    padding: 2px;
     background-color: #b3b3b3;
 }
 
-#resetButton {
-    background-color: red;
+.completed {
+    background-color: #5be479;
 }
 
-#resetButton:active {
-    background-color: darkred;
+.draggableContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#leftBox {
+    float: left;
+}
+
+#rightBox {
+    float: right;
 }
