@@ -56,12 +56,40 @@ function populateFields(lesson, exercise) {
     }
     document.getElementById('exercise-progress-bar').max = maxExerciseNumber;
 
-    if (lessonData[lesson][exercise].exerciseType == "flashcard") { // only type implemented for now
+    if (lessonData[lesson][exercise].exerciseType == "flashcard") {
         document.getElementById('exercise-type').value = "flashcard";
         document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;
         document.getElementById('exercise-answer').classList.add('hidden');
         document.getElementById('next-button').classList.add('hidden');
         document.getElementById('exercise-answer').innerText = lessonData[lesson][exercise].exerciseAnswer;
+    } else if (lessonData[lesson][exercise].exerciseType == "fill-in-the-blank") {
+        document.getElementById('exercise-type').value = "fill-in-the-blank";
+
+        let textWithBlanks = lessonData[lesson][exercise].exerciseQuestion;
+        let splitTextWithBlanks = textWithBlanks.split('__blank__');
+        for (let e in splitTextWithBlanks) {
+            document.getElementById('exercise-question').appendChild(new Text(splitTextWithBlanks[e]));
+            if (Number(e)+1 != splitTextWithBlanks.length) {
+                let inputE = document.createElement('input');
+                inputE.type = 'text';
+                inputE.id = "question" + e;
+                inputE.oninput = function () {
+                    this.classList.remove('incorrect');
+                }
+                document.getElementById('exercise-question').appendChild(inputE);
+            }
+        }
+
+        document.getElementById('exercise-answer').classList.add('hidden');
+        document.getElementById('next-button').classList.add('hidden');
+
+        for (let i in lessonData[lesson][exercise].exerciseAnswer) {
+            let answerE = document.createElement('input');
+            answerE.type = 'text'; // for debugging purposes, it will still be hidden by the div class
+            answerE.id = "answer" + i;
+            answerE.value = lessonData[lesson][exercise].exerciseAnswer[i];
+            document.getElementById('exercise-answer').appendChild(answerE);
+        }
     }
 }
 
@@ -71,6 +99,21 @@ function submitExercise() {
     if (exerciseType == "flashcard") {
         document.getElementById('exercise-answer').classList.toggle('hidden');
         document.getElementById('next-button').classList.toggle('hidden');
+    } else if (exerciseType == "fill-in-the-blank") {
+        let allCorrect = true;
+        for (let a = 0; a < document.getElementById('exercise-answer').children.length; a++) {
+            let answerEle = document.getElementById('exercise-answer').children[a];
+            let questionEle = document.getElementById('question' + answerEle.id.replace('answer', ''));
+            if (questionEle.value.toLowerCase() == answerEle.value.toLowerCase()) {
+                questionEle.disabled = true;
+            } else {
+                questionEle.classList.add('incorrect');
+                allCorrect = false;
+            }
+        }
+        if (allCorrect) {
+            document.getElementById('next-button').classList.remove('hidden');
+        }
     }
 }
 

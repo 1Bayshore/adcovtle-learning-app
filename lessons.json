@@ -15,6 +15,13 @@
             "exerciseType": "flashcard",
             "exerciseQuestion": "The Adcovtle learning app contains a variety of exercises for beginners through intermediate learners. These include flashcards, multiple choice exercises, writing practice, and translations.",
             "exerciseAnswer": "This introduction is presented in the form of flashcards. Next, we will demonstrate some other types of exercises."
+        },
+        "2": {
+            "exerciseNumber": 2,
+            "exerciseTitle": "Fill in the blank exercises",
+            "exerciseType": "fill-in-the-blank",
+            "exerciseQuestion": "You will see __blank__ in the exercise to fill in. Type in the missing word.",
+            "exerciseAnswer": ["blanks"]
         }
     }
 }

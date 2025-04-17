@@ -21,6 +21,17 @@ button {
     font-size: inherit;
 }
 
+input {
+    background-color: #ffffff;
+    font-family: inherit;
+    border: 1px solid black;
+    font-size: inherit;
+}
+
+.incorrect {
+    color: red;
+}
+
 button:active {
     background-color: #b3b3b3;
 }
