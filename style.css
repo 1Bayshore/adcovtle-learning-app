@@ -13,6 +13,10 @@ body {
     font-size: smaller;
 }
 
+#language-selection {
+    font-size: smaller;
+}
+
 progress {
     width: 100%;
     /*color: #77f6ff;*/

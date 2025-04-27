@@ -23,13 +23,21 @@ function getCookie(cname) {
 
 // All other code
 
+let supportedLanguages = ["demo", "adcovtle"];
+
 let lessonData = {};
 let currentUser = "default";
+let currentLearningLanguage = "demo";
 
 async function fetchData() {
-    let response = await fetch('lessons.json');
-    data = await response.json();
-    lessonData = data;
+    try {
+        let response = await fetch(currentLearningLanguage + '.json');
+        data = await response.json();
+        lessonData = data;
+        return true;
+    } catch {
+        return false;
+    }
 }
 
 function matchingDropCheck(e) {
@@ -251,8 +259,8 @@ function nextExercise() {
     if (newLesson == oldLessonMax) {
         displayCompletionScreen();
     } else {
-        setCookie(currentUser + 'currentLesson', newLesson, 365);
-        setCookie(currentUser + 'currentExercise', newExercise, 365);
+        setCookie(currentUser + currentLearningLanguage + 'currentLesson', newLesson, 365);
+        setCookie(currentUser + currentLearningLanguage + 'currentExercise', newExercise, 365);
         populateFields(newLesson, newExercise);
     }
 }
@@ -260,8 +268,8 @@ function nextExercise() {
 function resetProgress() {
     let confirmation = confirm("Are you sure you want to reset your progress? This cannot be undone.");
     if (confirmation) {
-        setCookie(currentUser + 'currentLesson', 0, 365);
-        setCookie(currentUser + 'currentExercise', 0, 365);
+        setCookie(currentUser + currentLearningLanguage + 'currentLesson', 0, 365);
+        setCookie(currentUser + currentLearningLanguage + 'currentExercise', 0, 365);
         populateFields(0, 0);
     }
 }
@@ -269,22 +277,50 @@ function resetProgress() {
 function login() {
     currentUser = document.getElementById('username').value;
     setCookie('currentUser', currentUser, 365);
-    let prevLesson = Number(getCookie(currentUser + 'currentLesson')); // will return 0 if unset
-    let prevExercise = Number(getCookie(currentUser + 'currentExercise')); // same as above
+    currentLearningLanguage = getCookie(username + 'currentLearningLanguage');
+    let prevLesson = Number(getCookie(currentUser + currentLearningLanguage + 'currentLesson')); // will return 0 if unset
+    let prevExercise = Number(getCookie(currentUser + currentLearningLanguage + 'currentExercise')); // same as above
     populateFields(prevLesson, prevExercise); // return to the previous lesson
     alert('Switched to user ' + currentUser);
 }
 
+function switchLearningLanguage() {
+    currentLearningLanguage = document.getElementById('learning-language').value;
+    setCookie(username + 'currentLearningLanguage', currentLearningLanguage, 365);
+    let prevLesson = Number(getCookie(currentUser + currentLearningLanguage + 'currentLesson')); // will return 0 if unset
+    let prevExercise = Number(getCookie(currentUser + currentLearningLanguage + 'currentExercise')); // same as above
+    fetchData().then(function () {
+        populateFields(prevLesson, prevExercise); // return to the previous lesson
+        alert('Switched to learning ' + currentLearningLanguage);
+    });
+}
+
+async function setupLanguageSelection() {
+    for (let i in supportedLanguages) {
+        let opt = document.createElement('option');
+        opt.value = supportedLanguages[i];
+        opt.innerText = supportedLanguages[i];
+        document.getElementById('learning-language').appendChild(opt);
+    }
+}
+
 async function loadPage() {
+    await setupLanguageSelection()
     await fetchData();
     currentUser = getCookie('currentUser');
     if (currentUser == "") {
         currentUser = "default";
+        setCookie('currentUser', currentUser, 365);
         alert('This site uses cookies to maintain your progress and distinguish you from other visitors. By continuing to use this site you agree to the use of cookies.')
     }
+    currentLearningLanguage = getCookie(currentUser + 'currentLearningLanguage');
+    if (currentLearningLanguage == "") {
+        currentLearningLanguage = "demo";
+    }
     document.getElementById('username').value = currentUser;
-    let prevLesson = Number(getCookie(currentUser + 'currentLesson')); // will return 0 if unset
-    let prevExercise = Number(getCookie(currentUser + 'currentExercise')); // same as above
+    document.getElementById('learning-language').value = currentLearningLanguage;
+    let prevLesson = Number(getCookie(currentUser + currentLearningLanguage + 'currentLesson')); // will return 0 if unset
+    let prevExercise = Number(getCookie(currentUser + currentLearningLanguage + 'currentExercise')); // same as above
     populateFields(prevLesson, prevExercise); // return to the previous lesson
 }
 
