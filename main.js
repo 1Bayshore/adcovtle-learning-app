@@ -23,7 +23,7 @@ function getCookie(cname) {
 
 // All other code
 
-let supportedLanguages = ["demo", "adcovtle"];
+let supportedLanguages = ["demo", "adcovtle"]; // updated manually for each new language
 
 let lessonData = {};
 let currentUser = "default";
@@ -266,7 +266,7 @@ function nextExercise() {
 }
 
 function resetProgress() {
-    let confirmation = confirm("Are you sure you want to reset your progress? This cannot be undone.");
+    let confirmation = confirm("Are you sure you want to reset your progress for the current learning language? This cannot be undone.");
     if (confirmation) {
         setCookie(currentUser + currentLearningLanguage + 'currentLesson', 0, 365);
         setCookie(currentUser + currentLearningLanguage + 'currentExercise', 0, 365);
