@@ -40,3 +40,17 @@ The content of the exercise, which is parsed according to the exercise type. For
 ### Exercise answer
 The answers to the exercise, which is according to the exercise type. For example, a flashcard answer will appear when a button is pressed.
 
+## Upcoming features
+The following features will be added in the near future.
+
+### Image support
+Optional images for each page will allow for a more visual experience.
+
+### Improved menus and navigation
+Right now, navigation is limited, and mostly consists of a username and language selection at the top of the page, plus a "Reset Progress" button at the bottom of the page. These will be replaced with a separate screen that allows users to set their username and select their language and lesson.
+
+### Improved page styling
+Currently, the page styling is limited and simplistic. A better design would allow for a light and dark mode, plus more asthetically pleasing elements on the page.
+
+### More Adcovtle content
+More Adcovtle content coming soon! This content will have a clearer focus on lesson themes, both grammatical/language themes and cultural themes.
