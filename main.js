@@ -84,6 +84,15 @@ function populateFields(lesson, exercise) {
     document.getElementById('exercise-answer').innerText = "";
     document.getElementById('next-button').classList.add('hidden');
 
+    if (lessonData[lesson][exercise].exerciseImage != undefined) {
+        let img_obj = document.createElement('img');
+        img_obj.src = '/images/' + lessonData[lesson][exercise].exerciseImage;
+        img_obj.classList.add('page-image');
+        document.getElementById('exercise-image-container').appendChild(img_obj);
+    } else {
+        document.getElementById('exercise-image-container').innerText = "";
+    }
+
     if (lessonData[lesson][exercise].exerciseType == "flashcard") {
         document.getElementById('exercise-type').value = "flashcard";
         document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;

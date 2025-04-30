@@ -80,3 +80,11 @@ input {
 #rightBox {
     float: right;
 }
+
+#exercise-image-container {
+    display: flex;
+}
+
+#exercise-image-container img {
+    width: 100%;
+}
