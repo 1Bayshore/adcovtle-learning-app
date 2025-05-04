@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intital-scale=1">
+        <title>Learn Conlangs online! - Dictonary</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="dictionary-language-selection">
+            <label for="dictionary-language-lookup">Language of words to look up:</label>
+            <select id="dictionary-language-lookup"></select>
+            <label for="dictionary-language-definitions">Language of definitions:</label>
+            <select id="dictionary-language-definitions"></select>
+            <!--<button onclick="switchDictionaryLanguages()">Switch dictionary languages</button>-->
+        </div>
+        <div id="dictionary-search">
+            <label for="search-term">Search for:</label>
+            <input type="text" id="search-term">
+            <button onclick="dictionarySearch()">Search</button>
+        </div>
+        <div id="dictionary-results">
+            <div id="dictionary-results-labels">
+                <div id="dictionary-result-words-label">Word</div>
+                <div id="dictionary-result-partsofspeech-label">Part of Speech</div>
+                <div id="dictionary-result-definitions-label">Definition</div>
+                <div id="dictionary-result-notes-label">Notes</div>
+            </div>
+            <div id="dictionary-results-items">
+                <div id="dictionary-result-words"></div>
+                <div id="dictionary-result-partsofspeech"></div>
+                <div id="dictionary-result-definitions"></div>
+                <div id="dictionary-result-notes"></div>
+            </div>
+        </div>
+        <div id="home-link">
+            <a href="index.html">Return to language learning</a>
+        </div>
+        <script type="text/javascript" src="dictionary.js"></script>
+    </body>
+</html>

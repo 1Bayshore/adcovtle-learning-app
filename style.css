@@ -88,3 +88,16 @@ input {
 #exercise-image-container img {
     width: 100%;
 }
+
+
+#dictionary-results div {
+    display: flex;
+}
+
+#dictionary-results-labels {
+    border-bottom: 1px solid black;
+}
+
+#dictionary-results div div {
+    flex: 50%;
+}
