@@ -9,9 +9,9 @@
     <body>
         <div class="dictionary-language-selection">
             <label for="dictionary-language-lookup">Language of words to look up:</label>
-            <select id="dictionary-language-lookup"></select>
+            <select id="dictionary-language-lookup" onchange="dictionarySearch()"></select>
             <label for="dictionary-language-definitions">Language of definitions:</label>
-            <select id="dictionary-language-definitions"></select>
+            <select id="dictionary-language-definitions" onchange="dictionarySearch()"></select>
             <!--<button onclick="switchDictionaryLanguages()">Switch dictionary languages</button>-->
         </div>
         <div id="dictionary-search">
