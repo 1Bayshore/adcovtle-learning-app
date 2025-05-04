@@ -34,7 +34,7 @@ async function fetchData() {
 function populateLanguageSelection() {
     for (let word in dictionaryData) {
         for (let wordLanguageOption in dictionaryData[word]) {
-            if (!(wordLanguageOption in possibleLanguages)) {
+            if (!(possibleLanguages.includes(wordLanguageOption))) {
                 possibleLanguages.push(wordLanguageOption);
             }
         }
@@ -69,23 +69,39 @@ function dictionarySearch() {
     for (let word in dictionaryData) {
         for (let wordLanguageOption in dictionaryData[word]) {
             if (wordLanguageOption == lookupLanguage) {
-                if (dictionaryData[word][wordLanguageOption]['word'] == lookupWord) {
+                if (dictionaryData[word][wordLanguageOption]['word'].includes(lookupWord)) {
                     for (let defLanguageOption in dictionaryData[word]) {
                         if (defLanguageOption == definitionsLanguage) {
-                            let ele = document.createElement('span');
-                            ele.innerText = dictionaryData[word][wordLanguageOption]['word'];
+                            let ele = document.createElement('div');
+                            if (dictionaryData[word][wordLanguageOption]['word'] != undefined) {
+                                ele.innerText = dictionaryData[word][wordLanguageOption]['word'];
+                            } else {
+                                ele.innerText = '--';
+                            }
                             document.getElementById('dictionary-result-words').appendChild(ele);
 
-                            let ele2 = document.createElement('span');
-                            ele2.innerText = dictionaryData[word][defLanguageOption]['partOfSpeech'];
+                            let ele2 = document.createElement('div');
+                            if (dictionaryData[word][defLanguageOption]['partOfSpeech'] != undefined) {
+                                ele2.innerText = dictionaryData[word][defLanguageOption]['partOfSpeech'];
+                            } else {
+                                ele2.innerText = '--';
+                            }
                             document.getElementById('dictionary-result-partsofspeech').appendChild(ele2);
 
-                            let ele3 = document.createElement('span');
-                            ele3.innerText = dictionaryData[word][defLanguageOption]['word'];
+                            let ele3 = document.createElement('div');
+                            if (dictionaryData[word][defLanguageOption]['word'] != undefined) {
+                                ele3.innerText = dictionaryData[word][defLanguageOption]['word'];
+                            } else {
+                                ele3.innerText == '--'
+                            }
                             document.getElementById('dictionary-result-definitions').appendChild(ele3);
 
-                            let ele4 = document.createElement('span');
-                            ele4.innerText = dictionaryData[word][wordLanguageOption]['notes'];
+                            let ele4 = document.createElement('div');
+                            if (dictionaryData[word][wordLanguageOption]['notes'] != undefined) {
+                                ele4.innerText = dictionaryData[word][wordLanguageOption]['notes'];
+                            } else {
+                                ele4.innerText = '--'
+                            }
                             document.getElementById('dictionary-result-notes').appendChild(ele4);
                         }
                     }

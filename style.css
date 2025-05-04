@@ -100,4 +100,5 @@ input {
 
 #dictionary-results div div {
     flex: 50%;
+    display: block;
 }
