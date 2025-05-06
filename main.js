@@ -31,7 +31,7 @@ let currentLearningLanguage = "demo";
 
 async function fetchData() {
     try {
-        let response = await fetch(currentLearningLanguage + '.json');
+        let response = await fetch('/languages/' + currentLearningLanguage + '.json');
         data = await response.json();
         lessonData = data;
         return true;
