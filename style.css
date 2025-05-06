@@ -40,12 +40,21 @@ body {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: #c9c9c983;
+    background-color: #b3b3b383;
 }
 
 progress {
     width: 100%;
-    /*color: #77f6ff;*/
+    background-color: #b3b3b3;
+    border: 0px;
+}
+
+progress::-moz-progress-bar {
+    background-color: #77f6ff;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #77f6ff;
 }
 
 button {
