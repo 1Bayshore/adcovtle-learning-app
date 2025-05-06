@@ -163,3 +163,22 @@ input {
     flex: 50%;
     display: block;
 }
+
+#term-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#term-container div {
+    width: 99%;
+    text-align: center;
+    background-color: #b3b3b3;
+    margin: 1%;
+    border-radius: 10px;
+    max-width: 40vh;
+}
+
+.term-img {
+    width: 100%;
+}

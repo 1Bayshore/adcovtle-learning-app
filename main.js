@@ -15,6 +15,143 @@ async function fetchData() {
     }
 }
 
+// Exercise setup and sumbition functions
+
+let defaultInnerHTML = document.getElementById('exercise-area').innerHTML;
+
+function clearDefaults() {
+    document.getElementById('exercise-area').innerText = "";
+}
+
+function restoreDefaults() {
+    document.getElementById('exercise-area').innerHTML = defaultInnerHTML;
+}
+
+function setupFlashcard(lesson, exercise) {
+    document.getElementById('exercise-type').value = "flashcard";
+    document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;
+    document.getElementById('exercise-answer').classList.add('hidden');
+    document.getElementById('exercise-answer').innerText = lessonData[lesson][exercise].exerciseAnswer;
+}
+
+function submitFlashcard() {
+    document.getElementById('exercise-answer').classList.toggle('hidden');
+    document.getElementById('next-button').classList.toggle('hidden');
+}
+
+function setupFillInTheBlank (lesson, exercise) {
+    document.getElementById('exercise-type').value = "fill-in-the-blank";
+
+    let textWithBlanks = lessonData[lesson][exercise].exerciseQuestion;
+    let splitTextWithBlanks = textWithBlanks.split('__blank__');
+    for (let e in splitTextWithBlanks) {
+        document.getElementById('exercise-question').appendChild(new Text(splitTextWithBlanks[e]));
+        if (Number(e)+1 != splitTextWithBlanks.length) {
+            let inputE = document.createElement('input');
+            inputE.type = 'text';
+            inputE.id = "question" + e;
+            inputE.oninput = function () {
+                this.classList.remove('incorrect');
+            }
+            document.getElementById('exercise-question').appendChild(inputE);
+        }
+    }
+
+    document.getElementById('exercise-answer').classList.add('hidden');
+    document.getElementById('next-button').classList.add('hidden');
+
+    for (let i in lessonData[lesson][exercise].exerciseAnswer) {
+        let answerE = document.createElement('input');
+        answerE.type = 'text'; // for debugging purposes, it will still be hidden by the div class
+        answerE.id = "answer" + i;
+        answerE.value = lessonData[lesson][exercise].exerciseAnswer[i];
+        document.getElementById('exercise-answer').appendChild(answerE);
+    }
+}
+
+function submitFillInTheBlank(lesson, exercise) {
+    let allCorrect = true;
+    for (let a = 0; a < document.getElementById('exercise-answer').children.length; a++) {
+        let answerEle = document.getElementById('exercise-answer').children[a];
+        let questionEle = document.getElementById('question' + answerEle.id.replace('answer', ''));
+        if (questionEle.value.toLowerCase() == answerEle.value.toLowerCase()) {
+            questionEle.disabled = true;
+        } else {
+            questionEle.classList.add('incorrect');
+            allCorrect = false;
+        }
+    }
+    if (allCorrect) {
+        document.getElementById('next-button').classList.remove('hidden');
+    }
+}
+
+function setupMatching(lesson, exercise) {
+    document.getElementById('exercise-type').value = "matching";
+    document.getElementById('exercise-question').innerText = "Match the items on the left with the items on the right:"
+
+    document.getElementById('exercise-answer').classList.remove('hidden');
+
+    let leftBox = document.createElement('div');
+    leftBox.id = 'leftBox';
+
+    let rightBox = document.createElement('div');
+    rightBox.id = 'rightBox';
+
+    let boxBox = document.createElement('div');
+    boxBox.id = 'boxBox';
+
+    boxBox.ondragover = function (e) {
+        e.preventDefault();
+    }
+    
+    document.getElementById('exercise-answer').appendChild(boxBox);
+    document.getElementById('boxBox').appendChild(leftBox);
+    document.getElementById('boxBox').appendChild(rightBox);
+
+    for (let i in lessonData[lesson][exercise].exerciseQuestion) {
+        let iEle = document.createElement('span');
+        iEle.draggable = true;
+        iEle.id = 'question' + i;
+        iEle.classList.add('draggable');
+        iEle.innerText = lessonData[lesson][exercise].exerciseQuestion[i];
+        iEle.ondrop = matchingDropCheck;
+        iEle.ondragstart = matchingDragStart;
+        document.getElementById('leftBox').appendChild(iEle);
+        document.getElementById('leftBox').appendChild(document.createElement('br'));
+    }
+
+    let answerArray = [];
+    for (let i in lessonData[lesson][exercise].exerciseAnswer) {
+        let iEle = document.createElement('span');
+        iEle.draggable = true;
+        iEle.id = 'answer' + i;
+        iEle.classList.add('draggable');
+        iEle.innerText = lessonData[lesson][exercise].exerciseAnswer[i];
+        iEle.ondrop = matchingDropCheck;
+        iEle.ondragstart = matchingDragStart;
+        answerArray.push(iEle);
+    }
+    
+    let fullAnswerArrayLength = answerArray.length;
+    for (let i = 0; i < fullAnswerArrayLength; i++) {
+        let appendingEle = answerArray[Math.floor(Math.random() * answerArray.length)];
+        answerArray.splice(answerArray.indexOf(appendingEle), 1);
+        document.getElementById('rightBox').appendChild(appendingEle);
+        document.getElementById('rightBox').appendChild(document.createElement('br'));
+    }
+
+    document.getElementById('leftBox').classList.add('draggableContainer');
+    document.getElementById('rightBox').classList.add('draggableContainer');
+}
+
+function submitMatching() {
+    if (document.getElementsByClassName('completed').length == document.getElementsByClassName('draggable').length) {
+        // all draggable elements are marked as completed, so user has matched them all
+        document.getElementById('next-button').classList.remove('hidden');
+    }
+}
+
 function matchingDropCheck(e) {
     let srcId = e.dataTransfer.getData("Text");
     let targetId = e.target.id;
@@ -29,6 +166,82 @@ function matchingDropCheck(e) {
 function matchingDragStart(e) {
     e.dataTransfer.setData("Text", e.target.id);
 }
+
+function setupMultipleChoice(lesson, exercise) {
+    document.getElementById('exercise-type').value = "multiple-choice";
+    document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;
+    document.getElementById('exercise-answer').classList.remove('hidden');
+
+    let formEle = document.createElement('form');
+    formEle.id = 'buttonForm';
+
+    for (let i in lessonData[lesson][exercise].exerciseAnswer) {
+        let iEle = document.createElement('input');
+        iEle.type = 'radio';
+        iEle.name = 'radioButton';
+        iEle.value = lessonData[lesson][exercise].exerciseAnswer[i];
+
+        let iEleLabel = document.createElement('label');
+        iEleLabel.for = iEle;
+        iEleLabel.innerText = i;
+
+        formEle.appendChild(iEle);
+        formEle.appendChild(iEleLabel);
+        formEle.appendChild(document.createElement('br'));
+    }
+    document.getElementById('exercise-answer').appendChild(formEle);
+}
+
+function submitMultipleChoice() {
+    let valueIsTrue = false;
+    document.getElementsByName('radioButton').forEach( function (i) {
+        if (i.checked && i.value == "true") { // yes this is supposed to be a string
+            valueIsTrue = true;
+        }
+    });
+    if (valueIsTrue) {
+        document.getElementById('next-button').classList.remove('hidden');
+    }
+}
+
+function setupTerminologyIntroduction(lesson, exercise) {
+    clearDefaults();
+    let terms = lessonData[lesson][exercise].terms;
+    let definitions = lessonData[lesson][exercise].definitions;
+    let termImgLinks = lessonData[lesson][exercise].termImgs;
+
+    let termCon = document.createElement('div');
+    termCon.id = 'term-container';
+
+    for (let i in terms) {
+        let termColumn = document.createElement('div');
+
+        let termImg = document.createElement('img');
+        termImg.src = '/images/' + termImgLinks[i];
+        termImg.classList.add('term-img');
+        termColumn.appendChild(termImg);
+
+        let term = document.createElement('div');
+        term.innerText = terms[i];
+        termColumn.appendChild(term);
+
+        let definition = document.createElement('div');
+        definition.innerText = definitions[i];
+        termColumn.appendChild(definition);
+
+        termCon.appendChild(termColumn);
+    }
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = nextExercise;
+    nextButton.innerText = 'Continue';
+
+    document.getElementById('exercise-area').appendChild(termCon);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
+
+// All other functions
 
 function updateProgressBars(lesson, exercise) {
     document.getElementById('lesson-progress-bar').value = lesson;
@@ -74,118 +287,15 @@ function populateFields(lesson, exercise) {
     }
 
     if (lessonData[lesson][exercise].exerciseType == "flashcard") {
-        document.getElementById('exercise-type').value = "flashcard";
-        document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;
-        document.getElementById('exercise-answer').classList.add('hidden');
-        document.getElementById('exercise-answer').innerText = lessonData[lesson][exercise].exerciseAnswer;
+        setupFlashcard(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "fill-in-the-blank") {
-        document.getElementById('exercise-type').value = "fill-in-the-blank";
-
-        let textWithBlanks = lessonData[lesson][exercise].exerciseQuestion;
-        let splitTextWithBlanks = textWithBlanks.split('__blank__');
-        for (let e in splitTextWithBlanks) {
-            document.getElementById('exercise-question').appendChild(new Text(splitTextWithBlanks[e]));
-            if (Number(e)+1 != splitTextWithBlanks.length) {
-                let inputE = document.createElement('input');
-                inputE.type = 'text';
-                inputE.id = "question" + e;
-                inputE.oninput = function () {
-                    this.classList.remove('incorrect');
-                }
-                document.getElementById('exercise-question').appendChild(inputE);
-            }
-        }
-
-        document.getElementById('exercise-answer').classList.add('hidden');
-        document.getElementById('next-button').classList.add('hidden');
-
-        for (let i in lessonData[lesson][exercise].exerciseAnswer) {
-            let answerE = document.createElement('input');
-            answerE.type = 'text'; // for debugging purposes, it will still be hidden by the div class
-            answerE.id = "answer" + i;
-            answerE.value = lessonData[lesson][exercise].exerciseAnswer[i];
-            document.getElementById('exercise-answer').appendChild(answerE);
-        }
+        setupFillInTheBlank(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "matching") {
-        document.getElementById('exercise-type').value = "matching";
-        document.getElementById('exercise-question').innerText = "Match the items on the left with the items on the right:"
-
-        document.getElementById('exercise-answer').classList.remove('hidden');
-
-        let leftBox = document.createElement('div');
-        leftBox.id = 'leftBox';
-
-        let rightBox = document.createElement('div');
-        rightBox.id = 'rightBox';
-
-        let boxBox = document.createElement('div');
-        boxBox.id = 'boxBox';
-
-        boxBox.ondragover = function (e) {
-            e.preventDefault();
-        }
-        
-        document.getElementById('exercise-answer').appendChild(boxBox);
-        document.getElementById('boxBox').appendChild(leftBox);
-        document.getElementById('boxBox').appendChild(rightBox);
-
-        for (let i in lessonData[lesson][exercise].exerciseQuestion) {
-            let iEle = document.createElement('span');
-            iEle.draggable = true;
-            iEle.id = 'question' + i;
-            iEle.classList.add('draggable');
-            iEle.innerText = lessonData[lesson][exercise].exerciseQuestion[i];
-            iEle.ondrop = matchingDropCheck;
-            iEle.ondragstart = matchingDragStart;
-            document.getElementById('leftBox').appendChild(iEle);
-            document.getElementById('leftBox').appendChild(document.createElement('br'));
-        }
-
-        let answerArray = [];
-        for (let i in lessonData[lesson][exercise].exerciseAnswer) {
-            let iEle = document.createElement('span');
-            iEle.draggable = true;
-            iEle.id = 'answer' + i;
-            iEle.classList.add('draggable');
-            iEle.innerText = lessonData[lesson][exercise].exerciseAnswer[i];
-            iEle.ondrop = matchingDropCheck;
-            iEle.ondragstart = matchingDragStart;
-            answerArray.push(iEle);
-        }
-        
-        let fullAnswerArrayLength = answerArray.length;
-        for (let i = 0; i < fullAnswerArrayLength; i++) {
-            let appendingEle = answerArray[Math.floor(Math.random() * answerArray.length)];
-            answerArray.splice(answerArray.indexOf(appendingEle), 1);
-            document.getElementById('rightBox').appendChild(appendingEle);
-            document.getElementById('rightBox').appendChild(document.createElement('br'));
-        }
-
-        document.getElementById('leftBox').classList.add('draggableContainer');
-        document.getElementById('rightBox').classList.add('draggableContainer');
+        setupMatching(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "multiple-choice") {
-        document.getElementById('exercise-type').value = "multiple-choice";
-        document.getElementById('exercise-question').innerText = lessonData[lesson][exercise].exerciseQuestion;
-        document.getElementById('exercise-answer').classList.remove('hidden');
-
-        let formEle = document.createElement('form');
-        formEle.id = 'buttonForm';
-
-        for (let i in lessonData[lesson][exercise].exerciseAnswer) {
-            let iEle = document.createElement('input');
-            iEle.type = 'radio';
-            iEle.name = 'radioButton';
-            iEle.value = lessonData[lesson][exercise].exerciseAnswer[i];
-
-            let iEleLabel = document.createElement('label');
-            iEleLabel.for = iEle;
-            iEleLabel.innerText = i;
-
-            formEle.appendChild(iEle);
-            formEle.appendChild(iEleLabel);
-            formEle.appendChild(document.createElement('br'));
-        }
-        document.getElementById('exercise-answer').appendChild(formEle);
+        setupMultipleChoice(lesson, exercise);
+    } else if (lessonData[lesson][exercise].exerciseType == "terminology-introduction") {
+        setupTerminologyIntroduction(lesson, exercise);
     }
 }
 
@@ -193,38 +303,13 @@ function submitExercise() {
     let exerciseType = document.getElementById('exercise-type').value;
 
     if (exerciseType == "flashcard") {
-        document.getElementById('exercise-answer').classList.toggle('hidden');
-        document.getElementById('next-button').classList.toggle('hidden');
+        submitFlashcard();
     } else if (exerciseType == "fill-in-the-blank") {
-        let allCorrect = true;
-        for (let a = 0; a < document.getElementById('exercise-answer').children.length; a++) {
-            let answerEle = document.getElementById('exercise-answer').children[a];
-            let questionEle = document.getElementById('question' + answerEle.id.replace('answer', ''));
-            if (questionEle.value.toLowerCase() == answerEle.value.toLowerCase()) {
-                questionEle.disabled = true;
-            } else {
-                questionEle.classList.add('incorrect');
-                allCorrect = false;
-            }
-        }
-        if (allCorrect) {
-            document.getElementById('next-button').classList.remove('hidden');
-        }
+        submitFillInTheBlank();
     } else if (exerciseType == "matching") {
-        if (document.getElementsByClassName('completed').length == document.getElementsByClassName('draggable').length) {
-            // all draggable elements are marked as completed, so user has matched them all
-            document.getElementById('next-button').classList.remove('hidden');
-        }
+        submitMatching();
     } else if (exerciseType == "multiple-choice") {
-        let valueIsTrue = false;
-        document.getElementsByName('radioButton').forEach( function (i) {
-            if (i.checked && i.value == "true") { // yes this is supposed to be a string
-                valueIsTrue = true;
-            }
-        });
-        if (valueIsTrue) {
-            document.getElementById('next-button').classList.remove('hidden');
-        }
+        submitMultipleChoice();
     }
 }
 
@@ -253,6 +338,9 @@ function nextExercise() {
 
     setCookie(currentUser + currentLearningLanguage + 'currentLesson', newLesson, 365);
     setCookie(currentUser + currentLearningLanguage + 'currentExercise', newExercise, 365);
+
+    restoreDefaults();
+
     if (newLesson == oldLessonMax) {
         displayCompletionScreen(newLesson, newExercise);
     } else {

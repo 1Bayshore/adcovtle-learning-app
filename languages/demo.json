@@ -43,7 +43,14 @@
             }
         },
         "5": {
-            "exerciseNumber": 5,
+            "exerciseTitle": "v0.2 Items",
+            "exerciseType": "terminology-introduction",
+            "terms": ["term 1", "term 2", "term 3", "term 4"],
+            "definitions": ["definition 1", "definition 2", "definition 3", "definition 4"],
+            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "6": {
+            "exerciseNumber": 6,
             "exerciseTitle": "Finished showing the tutorial",
             "exerciseType": "flashcard",
             "exerciseQuestion": "You've finished the tutorial!",
