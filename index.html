@@ -7,9 +7,9 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div id="user-language-panel" class="hidden">
+        <div id="left-panel" class="hidden">
             <div id="main-page-overlay"></div>
-            <div id="user-language-panel-items">
+            <div id="left-panel-items">
                 <div id="user-login">
                     <label for="username">Username: </label>
                     <input type="text" id="username">
@@ -20,9 +20,15 @@
                     <select id="learning-language" onchange="switchLearningLanguage()"></select>
                     <!--<button onclick="switchLearningLanguage()">Switch to learning language</button>-->
                 </div>
+                <div id="dictionary-link">
+                    <a href="dictionary.html">Look up a word in the dictionary</a>
+                </div>
+                <div id="reset-button-container">
+                    <button id="resetButton" onclick="resetProgress()">Reset Progress</button>        
+                </div>
             </div>
         </div>
-        <button id="menu-button" onclick="document.getElementById('user-language-panel').classList.toggle('hidden')">Menu</button>
+        <button id="menu-button" onclick="document.getElementById('left-panel').classList.toggle('hidden')">Menu</button>
         <div id="main-page">
             <h1 id="lesson-title"></h1>
             <div class="progress-bar">
@@ -41,12 +47,6 @@
             <button id="exercise-submit" onclick="submitExercise()">Check answer</button>
             <div id="exercise-answer"></div>
             <button class="hidden" id="next-button" onclick="nextExercise()">Next exercise</button>
-            <br>
-            <br>
-            <button id="resetButton" onclick="resetProgress()">Reset Progress</button>
-            <div id="dictionary-link">
-                <a href="dictionary.html">Look up a word in the dictionary</a>
-            </div>
         </div>
         <script type="text/javascript" src="main.js"></script>
     </body>

@@ -5,18 +5,20 @@
 body {
     padding-left: 20%;
     padding-right: 20%;
-    background-color: #ffc272;
+    background-color: #dcdbdb;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
 }
 
-#user-language-panel-items {
+#left-panel-items {
     position: fixed;
     left: 0px;
     top: 0px;
     bottom: 0px;
     padding: 10px;
     padding-top: 40px;
-    background-color: #7ce493;
+    /*background-color: #7ce493;^*/
+    background-color: #ffc272;
 }
 
 #menu-button {
@@ -47,14 +49,15 @@ progress {
     width: 100%;
     background-color: #b3b3b3;
     border: 0px;
+    border-radius: 7px;
 }
 
 progress::-moz-progress-bar {
-    background-color: #77f6ff;
+    background-color: #ffc272;
 }
 
 progress::-webkit-progress-bar {
-    background-color: #77f6ff;
+    background-color: #ffc272;
 }
 
 button {
@@ -62,9 +65,20 @@ button {
     font-family: inherit;
     border: 1px solid black;
     font-size: inherit;
+    border-radius: 7px;
 }
 
 button:active {
+    background-color: #b3b3b3;
+}
+
+select {
+    background-color: #ffffff;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+
+select:active {
     background-color: #b3b3b3;
 }
 
@@ -76,12 +90,18 @@ button:active {
     background-color: darkred;
 }
 
+#reset-button-container {
+    padding: 10px;
+    position: fixed;
+    bottom: 0px;
+}
 
 input {
     background-color: #ffffff;
     font-family: inherit;
     border: 1px solid black;
     font-size: inherit;
+    border-radius: 7px;
 }
 
 .incorrect {
