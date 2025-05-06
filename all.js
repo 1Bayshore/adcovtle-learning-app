@@ -25,6 +25,5 @@ function getCookie(cname) {
 
 function toggleLeftPanelVisibility() {
     document.getElementById('left-panel').classList.toggle('hidden');
-    document.getElementsByClassName('left-panel-items')[0].classList.toggle('left-panel-hidden');
     document.getElementsByClassName('left-panel-items')[0].classList.toggle('left-panel-visible');
 }
