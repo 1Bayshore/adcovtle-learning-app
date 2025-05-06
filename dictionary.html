@@ -7,15 +7,16 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <script type="text/javascript" src="all.js"></script>
         <div id="left-panel" class="hidden">
             <div id="main-page-overlay"></div>
-            <div id="left-panel-items">
-                <div id="home-link">
-                    <a href="index.html">Return to language learning</a>
-                </div>
+        </div>
+        <div class="left-panel-items">
+            <div id="home-link">
+                <a href="index.html">Return to language learning</a>
             </div>
         </div>
-        <button id="menu-button" onclick="document.getElementById('left-panel').classList.toggle('hidden')">Menu</button>
+        <button id="menu-button" onclick="toggleLeftPanelVisibility()">Menu</button>
         <div class="dictionary-language-selection">
             <label for="dictionary-language-lookup">Language of words to look up:</label>
             <select id="dictionary-language-lookup" onchange="dictionarySearch()"></select>
