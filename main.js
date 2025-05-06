@@ -319,7 +319,7 @@ function switchLearningLanguage() {
         } catch (e) {
             displayCompletionScreen(prevLesson, prevExercise);
         }
-        alert('Switched to learning ' + currentLearningLanguage);
+        //alert('Switched to learning ' + currentLearningLanguage);
     });
 }
 
