@@ -241,6 +241,62 @@ function setupTerminologyIntroduction(lesson, exercise) {
     document.getElementById('exercise-area').appendChild(nextButton);
 }
 
+let numberFlashcardsVisible = 0;
+let numberFlashcardsTotal = 0;
+
+function setupFlashcardv2(lesson, exercise) {
+    clearDefaults();
+    let terms = lessonData[lesson][exercise].terms;
+    let definitions = lessonData[lesson][exercise].definitions;
+    let termImgLinks = lessonData[lesson][exercise].termImgs;
+
+    let termCon = document.createElement('div');
+    termCon.id = 'term-container';
+
+    for (let i in terms) {
+        let termColumn = document.createElement('div');
+
+        let termImg = document.createElement('img');
+        termImg.src = '/images/' + termImgLinks[i];
+        termImg.classList.add('term-img');
+        termColumn.appendChild(termImg);
+
+        let term = document.createElement('div');
+        term.innerText = terms[i];
+        termColumn.appendChild(term);
+
+        let definition = document.createElement('div');
+        definition.innerText = definitions[i];
+        definition.classList.add('hidden');
+        termColumn.appendChild(definition);
+
+        termColumn.onclick = function () {
+            term.classList.toggle('hidden');
+            definition.classList.toggle('hidden');
+            if (definition.classList.contains('hidden')) {
+                numberFlashcardsVisible--;
+            } else {
+                numberFlashcardsVisible++;
+            }
+            if (numberFlashcardsVisible >= numberFlashcardsTotal) {
+                document.getElementById('next-button').classList.remove('hidden');
+            }
+        }
+
+        termCon.appendChild(termColumn);
+        numberFlashcardsTotal++;
+    }
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = nextExercise;
+    nextButton.innerText = 'Continue';
+    nextButton.classList.add('hidden');
+
+    document.getElementById('exercise-area').appendChild(termCon);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
+
 // All other functions
 
 function updateProgressBars(lesson, exercise) {
@@ -296,6 +352,8 @@ function populateFields(lesson, exercise) {
         setupMultipleChoice(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "terminology-introduction") {
         setupTerminologyIntroduction(lesson, exercise);
+    } else if (lessonData[lesson][exercise].exerciseType == "flashcard-v0.2") {
+        setupFlashcardv2(lesson, exercise);
     }
 }
 

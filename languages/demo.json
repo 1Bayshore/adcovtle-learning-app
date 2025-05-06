@@ -43,14 +43,21 @@
             }
         },
         "5": {
-            "exerciseTitle": "v0.2 Items",
+            "exerciseTitle": "v0.2 Items - Terminology",
             "exerciseType": "terminology-introduction",
             "terms": ["term 1", "term 2", "term 3", "term 4"],
             "definitions": ["definition 1", "definition 2", "definition 3", "definition 4"],
             "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         },
         "6": {
-            "exerciseNumber": 6,
+            "exerciseTitle": "v0.2 Items - Flashcards",
+            "exerciseType": "flashcard-v0.2",
+            "terms": ["term 1", "term 2", "term 3", "term 4"],
+            "definitions": ["definition 1", "definition 2", "definition 3", "definition 4"],
+            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "7": {
+            "exerciseNumber": 7,
             "exerciseTitle": "Finished showing the tutorial",
             "exerciseType": "flashcard",
             "exerciseQuestion": "You've finished the tutorial!",
