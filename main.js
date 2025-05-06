@@ -55,9 +55,8 @@ function matchingDragStart(e) {
     e.dataTransfer.setData("Text", e.target.id);
 }
 
-function populateFields(lesson, exercise) {
-    document.getElementById('lesson-title').innerText = lessonData[lesson].lessonTitle;
-    document.getElementById('lesson-progress-bar').value = lessonData[lesson].lessonNumber;
+function updateProgressBars(lesson, exercise) {
+    document.getElementById('lesson-progress-bar').value = lesson;
     let maxLessonNumber = 0;
     for (let i in lessonData) {
         let numI = Number(i);
@@ -68,8 +67,7 @@ function populateFields(lesson, exercise) {
     }
     document.getElementById('lesson-progress-bar').max = maxLessonNumber;
 
-    document.getElementById('exercise-title').innerText = lessonData[lesson][exercise].exerciseTitle;
-    document.getElementById('exercise-progress-bar').value = lessonData[lesson][exercise].exerciseNumber;
+    document.getElementById('exercise-progress-bar').value = exercise;
     let maxExerciseNumber = 0;
     for (let i in lessonData[lesson]) {
         let numI = Number(i);
@@ -79,10 +77,17 @@ function populateFields(lesson, exercise) {
         maxExerciseNumber = Math.max(numI, maxExerciseNumber) + 1; // plus because of 0-indexing
     }
     document.getElementById('exercise-progress-bar').max = maxExerciseNumber;
+}
+
+function populateFields(lesson, exercise) {
+    document.getElementById('lesson-title').innerText = lessonData[lesson].lessonTitle;
+    document.getElementById('exercise-title').innerText = lessonData[lesson][exercise].exerciseTitle;
+    updateProgressBars(lesson, exercise);
 
     document.getElementById('exercise-question').innerText = ""; // clear out these fields before setting their new values
     document.getElementById('exercise-answer').innerText = "";
     document.getElementById('next-button').classList.add('hidden');
+    document.getElementById('exercise-submit').classList.remove('hidden');
 
     if (lessonData[lesson][exercise].exerciseImage != undefined) {
         let img_obj = document.createElement('img');
@@ -248,8 +253,14 @@ function submitExercise() {
     }
 }
 
-function displayCompletionScreen() {
-    alert('Congratulations! You have finished all of the lessons. Check back for more lessons soon!');
+function displayCompletionScreen(newLesson, newExercise) {
+    updateProgressBars(newLesson, newExercise);
+    document.getElementById('lesson-title').innerText = "Congratulations!";
+    document.getElementById('exercise-title').innerText = "You have finished all of the lessons";
+    document.getElementById('exercise-question').innerText = "Check back for more lessons soon!";
+    document.getElementById('exercise-answer').innerText = "";
+    document.getElementById('next-button').classList.add('hidden');
+    document.getElementById('exercise-submit').classList.add('hidden');
 }
 
 function nextExercise() {
@@ -265,11 +276,11 @@ function nextExercise() {
         newLesson = oldLesson + 1;
     }
 
+    setCookie(currentUser + currentLearningLanguage + 'currentLesson', newLesson, 365);
+    setCookie(currentUser + currentLearningLanguage + 'currentExercise', newExercise, 365);
     if (newLesson == oldLessonMax) {
-        displayCompletionScreen();
+        displayCompletionScreen(newLesson, newExercise);
     } else {
-        setCookie(currentUser + currentLearningLanguage + 'currentLesson', newLesson, 365);
-        setCookie(currentUser + currentLearningLanguage + 'currentExercise', newExercise, 365);
         populateFields(newLesson, newExercise);
     }
 }
@@ -289,17 +300,25 @@ function login() {
     currentLearningLanguage = getCookie(username + 'currentLearningLanguage');
     let prevLesson = Number(getCookie(currentUser + currentLearningLanguage + 'currentLesson')); // will return 0 if unset
     let prevExercise = Number(getCookie(currentUser + currentLearningLanguage + 'currentExercise')); // same as above
-    populateFields(prevLesson, prevExercise); // return to the previous lesson
+    try {
+        populateFields(prevLesson, prevExercise); // return to the previous lesson
+    } catch (e) {
+        displayCompletionScreen(prevLesson, prevExercise);
+    }
     alert('Switched to user ' + currentUser);
 }
 
 function switchLearningLanguage() {
     currentLearningLanguage = document.getElementById('learning-language').value;
-    setCookie(username + 'currentLearningLanguage', currentLearningLanguage, 365);
+    setCookie(currentUser + 'currentLearningLanguage', currentLearningLanguage, 365);
     let prevLesson = Number(getCookie(currentUser + currentLearningLanguage + 'currentLesson')); // will return 0 if unset
     let prevExercise = Number(getCookie(currentUser + currentLearningLanguage + 'currentExercise')); // same as above
     fetchData().then(function () {
-        populateFields(prevLesson, prevExercise); // return to the previous lesson
+        try {
+            populateFields(prevLesson, prevExercise); // return to the previous lesson
+        } catch (e) {
+            displayCompletionScreen(prevLesson, prevExercise);
+        }
         alert('Switched to learning ' + currentLearningLanguage);
     });
 }
@@ -315,7 +334,6 @@ async function setupLanguageSelection() {
 
 async function loadPage() {
     await setupLanguageSelection()
-    await fetchData();
     currentUser = getCookie('currentUser');
     if (currentUser == "") {
         currentUser = "default";
@@ -330,7 +348,12 @@ async function loadPage() {
     document.getElementById('learning-language').value = currentLearningLanguage;
     let prevLesson = Number(getCookie(currentUser + currentLearningLanguage + 'currentLesson')); // will return 0 if unset
     let prevExercise = Number(getCookie(currentUser + currentLearningLanguage + 'currentExercise')); // same as above
-    populateFields(prevLesson, prevExercise); // return to the previous lesson
+    await fetchData();
+    try {
+        populateFields(prevLesson, prevExercise); // return to the previous lesson
+    } catch (e) {
+        displayCompletionScreen(prevLesson, prevExercise);
+    }
 }
 
 loadPage();

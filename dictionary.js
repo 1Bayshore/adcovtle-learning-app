@@ -97,8 +97,8 @@ function dictionarySearch() {
                             document.getElementById('dictionary-result-definitions').appendChild(ele3);
 
                             let ele4 = document.createElement('div');
-                            if (dictionaryData[word][wordLanguageOption]['notes'] != undefined) {
-                                ele4.innerText = dictionaryData[word][wordLanguageOption]['notes'];
+                            if (dictionaryData[word][defLanguageOption]['notes'] != undefined) {
+                                ele4.innerText = dictionaryData[word][defLanguageOption]['notes'];
                             } else {
                                 ele4.innerText = '--'
                             }
