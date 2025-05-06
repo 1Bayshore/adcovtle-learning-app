@@ -9,12 +9,38 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#user-language-panel-items {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    padding: 10px;
+    padding-top: 40px;
+    background-color: #7ce493;
+}
+
+#menu-button {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    margin: 10px;
+}
+
 #user-login {
     font-size: smaller;
 }
 
 #language-selection {
     font-size: smaller;
+}
+
+#main-page-overlay {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #c9c9c983;
 }
 
 progress {
