@@ -183,6 +183,16 @@ input {
     width: 100%;
 }
 
+#term-location {
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
 .correct-highlight {
     border: 3px solid #5be479;
+}
+
+#story-image {
+    width: 100%;
 }

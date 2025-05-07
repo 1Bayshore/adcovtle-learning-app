@@ -410,6 +410,85 @@ function setupMultipleChoicev2(lesson, exercise) {
     document.getElementById('exercise-area').appendChild(nextButton);
 }
 
+function setupStory(lesson, exercise) {
+    clearDefaults();
+
+    let storyline = lessonData[lesson][exercise].story;
+    let storyImgLink = lessonData[lesson][exercise].storyImg;
+
+    let storyImgContainer = document.createElement('div');
+    let storyImgEle = document.createElement('img');
+    storyImgEle.src = "/images/" + storyImgLink;
+    storyImgEle.id = 'story-image';
+    storyImgContainer.appendChild(storyImgEle);
+
+    let storyEle = document.createElement('div');
+    storyEle.innerText = storyline;
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = nextExercise;
+    nextButton.innerText = 'Continue';
+
+    document.getElementById('exercise-area').appendChild(storyImgContainer);
+    document.getElementById('exercise-area').appendChild(storyEle);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
+
+let storyBlanksCorrect = 0;
+let storyBlanksTotal = 0;
+function setupStoryWithBlanks(lesson, exercise) {
+    clearDefaults();
+
+    let storyline = lessonData[lesson][exercise].story;
+    let storyImgLink = lessonData[lesson][exercise].storyImg;
+    let storyBlankAnswers = lessonData[lesson][exercise].blankAnswers;
+
+    let storyImgContainer = document.createElement('div');
+    let storyImgEle = document.createElement('img');
+    storyImgEle.src = "/images/" + storyImgLink;
+    storyImgEle.id = 'story-image';
+    storyImgContainer.appendChild(storyImgEle);
+
+    let storyEle = document.createElement('div');
+
+    for (let i in storyline.split('__blank__')) {
+        let storySpan = document.createElement('span');
+        storySpan.innerText = storyline.split('__blank__')[i];
+        storyEle.appendChild(storySpan);
+
+        if (i != storyline.split('__blank__').length - 1) {
+
+            let storyBlank = document.createElement('input');
+            storyBlank.type = "text";
+            storyBlank.onchange = function () {
+                if (storyBlank.value == storyBlankAnswers[i]) {
+                    storyBlank.classList.remove('incorrect');
+                    storyBlank.disabled = true;
+                    storyBlanksCorrect++;
+                    if (storyBlanksCorrect >= storyBlanksTotal) {
+                        nextButton.classList.remove('hidden');
+                    }
+                } else {
+                    storyBlank.classList.add('incorrect');
+                }
+            }
+            storyEle.appendChild(storyBlank);
+            storyBlanksTotal++;
+        }
+    }
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = nextExercise;
+    nextButton.innerText = 'Continue';
+    nextButton.classList.add('hidden');
+
+    document.getElementById('exercise-area').appendChild(storyImgContainer);
+    document.getElementById('exercise-area').appendChild(storyEle);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
+
 // All other functions
 
 function updateProgressBars(lesson, exercise) {
@@ -471,6 +550,10 @@ function populateFields(lesson, exercise) {
         setupFillInTheBlankv2(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "multiple-choice-v0.2") {
         setupMultipleChoicev2(lesson, exercise);
+    } else if (lessonData[lesson][exercise].exerciseType == "storyline") {
+        setupStory(lesson, exercise);
+    } else if (lessonData[lesson][exercise].exerciseType == "storyline-with-blanks") {
+        setupStoryWithBlanks(lesson, exercise);
     }
 }
 

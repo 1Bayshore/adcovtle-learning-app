@@ -43,27 +43,33 @@
             }
         },
         "5": {
+            "exerciseTitle": "Now introducing: v0.2 items!",
+            "exerciseType": "storyline",
+            "story": "Now we will introduce some v0.2 items! These include terminology introductions, flashcards, fill in the blank, and matching.",
+            "storyImg": "image-coming-soon.svg"
+        },
+        "6": {
             "exerciseTitle": "v0.2 Items - Terminology",
             "exerciseType": "terminology-introduction",
             "terms": ["term 1", "term 2", "term 3", "term 4"],
             "definitions": ["definition 1", "definition 2", "definition 3", "definition 4"],
             "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         },
-        "6": {
+        "7": {
             "exerciseTitle": "v0.2 Items - Flashcards",
             "exerciseType": "flashcard-v0.2",
             "terms": ["term 1", "term 2", "term 3", "term 4"],
             "definitions": ["definition 1", "definition 2", "definition 3", "definition 4"],
             "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         },
-        "7": {
+        "8": {
             "exerciseTitle": "v0.2 Items - Fill in the Blank",
             "exerciseType": "fill-in-the-blank-v0.2",
             "terms": ["this", "is", "a", "demo"],
             "definitions": ["this", "is", "a", "demo"],
             "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         },
-        "8": {
+        "9": {
             "exerciseTitle": "v0.2 Items - Multiple Choice",
             "exerciseType": "multiple-choice-v0.2",
             "term": "correct",
@@ -71,8 +77,15 @@
             "correctAnswer": "correct",
             "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         },
-        "9": {
-            "exerciseNumber": 9,
+        "10": {
+            "exerciseTitle": "v0.2 Items - Storyline with blanks",
+            "exerciseType": "storyline-with-blanks",
+            "story": "Storylines like this one will sometimes have __blank__ to fill in. There may be several __blank__.",
+            "storyImg": "image-coming-soon.svg",
+            "blankAnswers": ["blanks", "blanks"]
+        },
+        "11": {
+            "exerciseNumber": 11,
             "exerciseTitle": "Finished showing the tutorial",
             "exerciseType": "flashcard",
             "exerciseQuestion": "You've finished the tutorial!",
