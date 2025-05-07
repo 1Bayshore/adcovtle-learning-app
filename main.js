@@ -3,6 +3,7 @@ let supportedLanguages = ["demo", "adcovtle"]; // updated manually for each new 
 let lessonData = {};
 let currentUser = "default";
 let currentLearningLanguage = "demo";
+let currentUserLanguageVocab = {};
 
 async function fetchData() {
     try {
@@ -246,6 +247,9 @@ let numberFlashcardsTotal = 0;
 
 function setupFlashcardv2(lesson, exercise) {
     clearDefaults();
+    numberFlashcardsTotal = 0;
+    numberFlashcardsVisible = 0;
+
     let terms = lessonData[lesson][exercise].terms;
     let definitions = lessonData[lesson][exercise].definitions;
     let termImgLinks = lessonData[lesson][exercise].termImgs;
@@ -439,6 +443,8 @@ let storyBlanksCorrect = 0;
 let storyBlanksTotal = 0;
 function setupStoryWithBlanks(lesson, exercise) {
     clearDefaults();
+    storyBlanksCorrect = 0;
+    storyBlanksTotal = 0;
 
     let storyline = lessonData[lesson][exercise].story;
     let storyImgLink = lessonData[lesson][exercise].storyImg;
@@ -490,6 +496,72 @@ function setupStoryWithBlanks(lesson, exercise) {
 }
 
 // All other functions
+
+function showLearnedVocab() {
+    clearDefaults();
+
+    document.getElementById('lesson-title').innerText = "Vocabulary review";
+    document.getElementById('exercise-title').innerText = "Currently reviewing vocabulary";
+
+    let vocabStr = getCookie(currentUser + currentLearningLanguage + 'learnedVocab');
+    if (vocabStr == "") {
+        document.getElementById('exercise-area').innerText = "You have not learned any vocab yet. Keep learning and vocab will appear here!";
+        let nextButton = document.createElement('button');
+        nextButton.id = 'next-button';
+        nextButton.onclick = function () {
+            restoreDefaults();
+            populateFields(document.getElementById('lesson-progress-bar').value, document.getElementById('exercise-progress-bar').value
+        );}
+        nextButton.innerText = 'Return to exercises';
+
+        document.getElementById('exercise-area').appendChild(nextButton);
+        return;
+    }
+    let termDefObj = JSON.parse(vocabStr);
+
+    let termCon = document.createElement('div');
+    termCon.id = 'term-container';
+
+    for (let i in termDefObj) {
+        let termColumn = document.createElement('div');
+
+        let termImg = document.createElement('img');
+        termImg.src = '/images/' + termDefObj[i][1];
+        termImg.classList.add('term-img');
+        termColumn.appendChild(termImg);
+
+        let term = document.createElement('div');
+        term.innerText = i;
+        termColumn.appendChild(term);
+
+        let definition = document.createElement('div');
+        definition.innerText = termDefObj[i][0];
+        definition.classList.add('hidden');
+        termColumn.appendChild(definition);
+
+        termColumn.onclick = function () {
+            term.classList.toggle('hidden');
+            definition.classList.toggle('hidden');
+        }
+
+        termCon.appendChild(termColumn);
+    }
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = function () {
+        restoreDefaults();
+        if (document.getElementById('lesson-progress-bar').value == document.getElementById('lesson-progress-bar').max) {
+            displayCompletionScreen(document.getElementById('lesson-progress-bar').value, document.getElementById('exercise-progress-bar').value);
+        } else {
+            populateFields(document.getElementById('lesson-progress-bar').value, document.getElementById('exercise-progress-bar').value);
+        }
+    }
+    nextButton.innerText = 'Return to exercises';
+
+    document.getElementById('exercise-area').appendChild(termCon);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
 
 function updateProgressBars(lesson, exercise) {
     document.getElementById('lesson-progress-bar').value = lesson;
@@ -596,6 +668,10 @@ function nextExercise() {
 
     setCookie(currentUser + currentLearningLanguage + 'currentLesson', newLesson, 365);
     setCookie(currentUser + currentLearningLanguage + 'currentExercise', newExercise, 365);
+    if (lessonData[oldLesson][oldExercise].newVocab != undefined) {
+        currentUserLanguageVocab = {...currentUserLanguageVocab, ...lessonData[oldLesson][oldExercise].newVocab};
+        setCookie(currentUser + currentLearningLanguage + 'learnedVocab', JSON.stringify(currentUserLanguageVocab), 365);
+    }
 
     restoreDefaults();
 
@@ -635,6 +711,7 @@ function switchLearningLanguage() {
     let prevLesson = Number(getCookie(currentUser + currentLearningLanguage + 'currentLesson')); // will return 0 if unset
     let prevExercise = Number(getCookie(currentUser + currentLearningLanguage + 'currentExercise')); // same as above
     fetchData().then(function () {
+        restoreDefaults();
         try {
             populateFields(prevLesson, prevExercise); // return to the previous lesson
         } catch (e) {

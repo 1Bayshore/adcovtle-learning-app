@@ -168,9 +168,11 @@ input {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #term-container div {
+    flex: 1 0 21%;
     width: 99%;
     text-align: center;
     background-color: #b3b3b3;

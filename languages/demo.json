@@ -21,14 +21,23 @@
             "exerciseTitle": "Fill in the blank exercises",
             "exerciseType": "fill-in-the-blank",
             "exerciseQuestion": "You will see __blank__ in the exercise to fill in. Type in the missing word. (Hint: try 'blanks')",
-            "exerciseAnswer": ["blanks"]
+            "exerciseAnswer": ["blanks"],
+            "newVocab": {
+                "blanks": ["blanks", "image-coming-soon.svg"]
+            }
         },
         "3": {
             "exerciseNumber": 3,
             "exerciseTitle": "Matching exercises",
             "exerciseType": "matching",
             "exerciseQuestion": ["this", "matches", "with", "that"],
-            "exerciseAnswer": ["this", "matches", "with", "that"]
+            "exerciseAnswer": ["this", "matches", "with", "that"],
+            "newVocab": {
+                "this": ["this", "image-coming-soon.svg"],
+                "matches": ["matches", "image-coming-soon.svg"],
+                "with": ["with", "image-coming-soon.svg"],
+                "that": ["that", "image-coming-soon.svg"]
+            }
         },
         "4": {
             "exerciseNumber": 4,
@@ -40,6 +49,9 @@
                 "B": false,
                 "C": true,
                 "D": false
+            },
+            "newVocab": {
+                "C": ["true", "image-coming-soon.svg"]
             }
         },
         "5": {
@@ -53,7 +65,13 @@
             "exerciseType": "terminology-introduction",
             "terms": ["term 1", "term 2", "term 3", "term 4"],
             "definitions": ["definition 1", "definition 2", "definition 3", "definition 4"],
-            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"],
+            "newVocab": {
+                "term 1": ["definition 1", "image-coming-soon.svg"],
+                "term 2": ["definition 2", "image-coming-soon.svg"],
+                "term 3": ["definition 3", "image-coming-soon.svg"],
+                "term 4": ["definition 4", "image-coming-soon.svg"]
+            }
         },
         "7": {
             "exerciseTitle": "v0.2 Items - Flashcards",
