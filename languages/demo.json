@@ -57,7 +57,14 @@
             "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         },
         "7": {
-            "exerciseNumber": 7,
+            "exerciseTitle": "v0.2 Items - Fill in the Blank",
+            "exerciseType": "fill-in-the-blank-v0.2",
+            "terms": ["this", "is", "a", "demo"],
+            "definitions": ["this", "is", "a", "demo"],
+            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "8": {
+            "exerciseNumber": 8,
             "exerciseTitle": "Finished showing the tutorial",
             "exerciseType": "flashcard",
             "exerciseQuestion": "You've finished the tutorial!",

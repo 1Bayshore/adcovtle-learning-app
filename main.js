@@ -297,6 +297,61 @@ function setupFlashcardv2(lesson, exercise) {
     document.getElementById('exercise-area').appendChild(nextButton);
 }
 
+function setupFillInTheBlankv2(lesson, exercise) {
+    clearDefaults();
+    let terms = lessonData[lesson][exercise].terms;
+    let definitions = lessonData[lesson][exercise].definitions;
+    let termImgLinks = lessonData[lesson][exercise].termImgs;
+
+    let termCon = document.createElement('div');
+    termCon.id = 'term-container';
+
+    for (let i in terms) {
+        let termColumn = document.createElement('div');
+
+        let termImg = document.createElement('img');
+        termImg.src = '/images/' + termImgLinks[i];
+        termImg.classList.add('term-img');
+        termColumn.appendChild(termImg);
+
+        let term = document.createElement('div');
+        term.innerText = terms[i];
+        termColumn.appendChild(term);
+
+        let definition = document.createElement('div');
+        let definitionAnswer = document.createElement('input');
+        definitionAnswer.type = "hidden";
+        definitionAnswer.value = definitions[i];
+        definition.appendChild(definitionAnswer)
+
+        let definitionInput = document.createElement('input');
+        definitionInput.type = "text";
+        definitionInput.classList.add('incorrect');
+        definitionInput.onchange = function () {
+            if (definitionInput.value == definitionAnswer.value) {
+                definitionInput.classList.remove('incorrect');
+                definitionInput.disabled = true;
+                if (termCon.getElementsByClassName('incorrect').length == 0) {
+                    nextButton.classList.remove('hidden');
+                }
+            }
+        }
+        definition.appendChild(definitionInput);
+        termColumn.appendChild(definition);
+
+        termCon.appendChild(termColumn);
+    }
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = nextExercise;
+    nextButton.innerText = 'Continue';
+    nextButton.classList.add('hidden');
+
+    document.getElementById('exercise-area').appendChild(termCon);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
+
 // All other functions
 
 function updateProgressBars(lesson, exercise) {
@@ -354,6 +409,8 @@ function populateFields(lesson, exercise) {
         setupTerminologyIntroduction(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "flashcard-v0.2") {
         setupFlashcardv2(lesson, exercise);
+    } else if (lessonData[lesson][exercise].exerciseType == "fill-in-the-blank-v0.2") {
+        setupFillInTheBlankv2(lesson, exercise);
     }
 }
 
