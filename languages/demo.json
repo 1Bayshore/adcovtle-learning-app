@@ -64,7 +64,15 @@
             "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         },
         "8": {
-            "exerciseNumber": 8,
+            "exerciseTitle": "v0.2 Items - Multiple Choice",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "correct",
+            "choices": ["which", "is", "correct"],
+            "correctAnswer": "correct",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "9": {
+            "exerciseNumber": 9,
             "exerciseTitle": "Finished showing the tutorial",
             "exerciseType": "flashcard",
             "exerciseQuestion": "You've finished the tutorial!",

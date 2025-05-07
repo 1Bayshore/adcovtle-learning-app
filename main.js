@@ -352,6 +352,64 @@ function setupFillInTheBlankv2(lesson, exercise) {
     document.getElementById('exercise-area').appendChild(nextButton);
 }
 
+function setupMultipleChoicev2(lesson, exercise) {
+    clearDefaults();
+    let term = lessonData[lesson][exercise].term;
+    let choices = lessonData[lesson][exercise].choices;
+    let correctAnswerValue = lessonData[lesson][exercise].correctAnswer;
+    let choiceImgLinks = lessonData[lesson][exercise].choiceImgs;
+
+    let termLoc = document.createElement('div');
+    termLoc.id = 'term-location';
+    termLoc.innerText = term;
+    document.getElementById('exercise-area').appendChild(termLoc);
+
+    let choiceCon = document.createElement('div');
+    choiceCon.id = 'term-container';
+
+    for (let i in choices) {
+        let choiceColumn = document.createElement('div');
+
+        let choiceImg = document.createElement('img');
+        choiceImg.src = '/images/' + choiceImgLinks[i];
+        choiceImg.classList.add('term-img');
+        choiceColumn.appendChild(choiceImg);
+
+        let answer = document.createElement('div');
+        let answerText = document.createElement('span');
+        answerText.innerText = choices[i];
+        answer.appendChild(answerText);
+
+        let correctAnswer = document.createElement('input');
+        correctAnswer.type = "hidden";
+        if (choices[i] == correctAnswerValue) {
+            correctAnswer.value = true;
+        } else {
+            correctAnswer.value = false;
+        }
+        answer.appendChild(correctAnswer)
+
+        choiceColumn.onclick = function () {
+            if (correctAnswer.value == "true") {
+                choiceColumn.classList.add('correct-highlight');
+                nextButton.classList.remove('hidden');
+            }
+        }
+
+        choiceColumn.appendChild(answer);
+        choiceCon.appendChild(choiceColumn);
+    }
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = nextExercise;
+    nextButton.innerText = 'Continue';
+    nextButton.classList.add('hidden');
+
+    document.getElementById('exercise-area').appendChild(choiceCon);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
+
 // All other functions
 
 function updateProgressBars(lesson, exercise) {
@@ -411,6 +469,8 @@ function populateFields(lesson, exercise) {
         setupFlashcardv2(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "fill-in-the-blank-v0.2") {
         setupFillInTheBlankv2(lesson, exercise);
+    } else if (lessonData[lesson][exercise].exerciseType == "multiple-choice-v0.2") {
+        setupMultipleChoicev2(lesson, exercise);
     }
 }
 

@@ -182,3 +182,7 @@ input {
 .term-img {
     width: 100%;
 }
+
+.correct-highlight {
+    border: 3px solid #5be479;
+}
