@@ -2,7 +2,7 @@ let supportedLanguages = ["demo", "adcovtle"]; // updated manually for each new 
 
 let lessonData = {};
 let currentUser = "default";
-let currentLearningLanguage = "demo";
+let currentLearningLanguage = "adcovtle";
 let currentUserLanguageVocab = {};
 
 async function fetchData() {
@@ -871,7 +871,7 @@ async function loadPage() {
     }
     currentLearningLanguage = getCookie(currentUser + 'currentLearningLanguage');
     if (currentLearningLanguage == "") {
-        currentLearningLanguage = "demo";
+        currentLearningLanguage = "adcovtle";
     }
     document.getElementById('username').value = currentUser;
     document.getElementById('learning-language').value = currentLearningLanguage;
