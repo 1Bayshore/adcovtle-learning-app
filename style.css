@@ -196,6 +196,10 @@ input {
     border: 3px solid #5be479;
 }
 
+.select-highlight {
+    border: 3px solid #ffc272;
+}
+
 #story-image {
     width: 100%;
 }

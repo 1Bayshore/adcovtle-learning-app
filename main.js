@@ -502,6 +502,7 @@ function setupStoryWithBlanks(lesson, exercise) {
 let totalMatched = 0;
 let totalToMatch = 0;
 let beingDragged = null;
+let tappedEle = null;
 
 function setupMatchingv2(lesson, exercise) {
     clearDefaults();
@@ -538,6 +539,7 @@ function setupMatchingv2(lesson, exercise) {
 
         termRow.appendChild(term);
 
+        // for desktop
         termRow.draggable = true;
         termRow.ondragover = function (e) {
             e.preventDefault();
@@ -555,6 +557,53 @@ function setupMatchingv2(lesson, exercise) {
                 if (totalMatched >= totalToMatch) {
                     nextButton.classList.remove('hidden');
                 }
+            }
+        }
+
+        // for mobile (thanks to https://codepen.io/deepakkadarivel/pen/LrGEdL)
+        /*termRow.ontouchmove = function (e) {
+            if (termRow.style.width == "" || termRow.style.height == "") {
+                termRow.style.width = termRow.offsetWidth;
+                termRow.style.height = termRow.offsetHeight;
+            }
+            let touchLocation = e.targetTouches[0];
+            termRow.style.position = "absolute";
+            termRow.style.left = touchLocation.pageX + 'px';
+            termRow.style.top = touchLocation.pageY + 'px';
+        }
+        termRow.ontouchend = function (e) {
+            let x = parseInt(termRow.style.left);
+            let y = parseInt(termRow.style.top);
+            termRow.style = "";
+
+            let dropOn = document.elementFromPoint(x, y);
+            if (dropOn.id.includes('term')) {
+                if (dropOn.getElementsByClassName('term-text')[0].innerText == match.value) {
+                    termRow.classList.add('correct-highlight');
+                    beingDragged.classList.add('correct-highlight');
+                    totalMatched++;
+
+                    if (totalMatched >= totalToMatch) {
+                        nextButton.classList.remove('hidden');
+                    }
+                }
+            }*/
+        termRow.ontouchend = function (e) {
+            if (tappedEle != null) {
+                if (tappedEle.getElementsByClassName('term-text')[0].innerText == match.value) {
+                    termRow.classList.add('correct-highlight');
+                    tappedEle.classList.add('correct-highlight');
+                    totalMatched++;
+
+                    if (totalMatched >= totalToMatch) {
+                        nextButton.classList.remove('hidden');
+                    }
+                }
+                tappedEle.classList.remove('select-highlight');
+                tappedEle = null;
+            } else {
+                termRow.classList.add('select-highlight');
+                tappedEle = termRow;
             }
         }
 
@@ -604,6 +653,25 @@ function setupMatchingv2(lesson, exercise) {
                 if (totalMatched >= totalToMatch) {
                     nextButton.classList.remove('hidden');
                 }
+            }
+        }
+
+        defRow.ontouchend = function (e) {
+            if (tappedEle != null) {
+                if (tappedEle.getElementsByClassName('term-text')[0].innerText == match.value) {
+                    defRow.classList.add('correct-highlight');
+                    tappedEle.classList.add('correct-highlight');
+                    totalMatched++;
+
+                    if (totalMatched >= totalToMatch) {
+                        nextButton.classList.remove('hidden');
+                    }
+                }
+                tappedEle.classList.remove('select-highlight');
+                tappedEle = null;
+            } else {
+                defRow.classList.add('select-highlight');
+                tappedEle = defRow;
             }
         }
 
