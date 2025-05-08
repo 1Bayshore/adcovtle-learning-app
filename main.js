@@ -220,6 +220,7 @@ function setupTerminologyIntroduction(lesson, exercise) {
         let termImg = document.createElement('img');
         termImg.src = '/images/' + termImgLinks[i];
         termImg.classList.add('term-img');
+        termImg.draggable = false;
         termColumn.appendChild(termImg);
 
         let term = document.createElement('div');
@@ -263,6 +264,7 @@ function setupFlashcardv2(lesson, exercise) {
         let termImg = document.createElement('img');
         termImg.src = '/images/' + termImgLinks[i];
         termImg.classList.add('term-img');
+        termImg.draggable = false;
         termColumn.appendChild(termImg);
 
         let term = document.createElement('div');
@@ -316,6 +318,7 @@ function setupFillInTheBlankv2(lesson, exercise) {
         let termImg = document.createElement('img');
         termImg.src = '/images/' + termImgLinks[i];
         termImg.classList.add('term-img');
+        termImg.draggable = false;
         termColumn.appendChild(termImg);
 
         let term = document.createElement('div');
@@ -377,6 +380,7 @@ function setupMultipleChoicev2(lesson, exercise) {
         let choiceImg = document.createElement('img');
         choiceImg.src = '/images/' + choiceImgLinks[i];
         choiceImg.classList.add('term-img');
+        choiceImg.draggable = false;
         choiceColumn.appendChild(choiceImg);
 
         let answer = document.createElement('div');
@@ -518,6 +522,7 @@ function setupMatchingv2(lesson, exercise) {
         let termImg = document.createElement('img');
         termImg.src = '/images/' + termImgLinks[i];
         termImg.classList.add('term-img');
+        termImg.draggable = false;
         termRow.appendChild(termImg);
 
         let term = document.createElement('div');
@@ -567,6 +572,7 @@ function setupMatchingv2(lesson, exercise) {
         let defImg = document.createElement('img');
         defImg.src = '/images/' + defImgLinks[j];
         defImg.classList.add('term-img');
+        defImg.draggable = false;
         defRow.appendChild(defImg);
 
         let definition = document.createElement('div');
@@ -657,6 +663,7 @@ function showLearnedVocab() {
         let termImg = document.createElement('img');
         termImg.src = '/images/' + termDefObj[i][1];
         termImg.classList.add('term-img');
+        termImg.draggable = false;
         termColumn.appendChild(termImg);
 
         let term = document.createElement('div');
