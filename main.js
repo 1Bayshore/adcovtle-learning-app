@@ -212,7 +212,7 @@ function setupTerminologyIntroduction(lesson, exercise) {
     let termImgLinks = lessonData[lesson][exercise].termImgs;
 
     let termCon = document.createElement('div');
-    termCon.id = 'term-container';
+    termCon.classList.add('term-container');
 
     for (let i in terms) {
         let termColumn = document.createElement('div');
@@ -255,7 +255,7 @@ function setupFlashcardv2(lesson, exercise) {
     let termImgLinks = lessonData[lesson][exercise].termImgs;
 
     let termCon = document.createElement('div');
-    termCon.id = 'term-container';
+    termCon.classList.add('term-container');
 
     for (let i in terms) {
         let termColumn = document.createElement('div');
@@ -308,7 +308,7 @@ function setupFillInTheBlankv2(lesson, exercise) {
     let termImgLinks = lessonData[lesson][exercise].termImgs;
 
     let termCon = document.createElement('div');
-    termCon.id = 'term-container';
+    termCon.classList.add('term-container');
 
     for (let i in terms) {
         let termColumn = document.createElement('div');
@@ -369,7 +369,7 @@ function setupMultipleChoicev2(lesson, exercise) {
     document.getElementById('exercise-area').appendChild(termLoc);
 
     let choiceCon = document.createElement('div');
-    choiceCon.id = 'term-container';
+    choiceCon.classList.add('term-container');
 
     for (let i in choices) {
         let choiceColumn = document.createElement('div');
@@ -495,6 +495,135 @@ function setupStoryWithBlanks(lesson, exercise) {
     document.getElementById('exercise-area').appendChild(nextButton);
 }
 
+let totalMatched = 0;
+let totalToMatch = 0;
+let beingDragged = null;
+
+function setupMatchingv2(lesson, exercise) {
+    clearDefaults();
+    totalMatched = 0;
+    totalToMatch = 0;
+    let terms = lessonData[lesson][exercise].terms;
+    let definitions = lessonData[lesson][exercise].definitions;
+    let termImgLinks = lessonData[lesson][exercise].termImgs;
+    let defImgLinks = lessonData[lesson][exercise].definitionImgs;
+
+    let leftCon = document.createElement('div');
+    leftCon.classList.add('term-container');
+
+    for (let i in terms) {
+        let termRow = document.createElement('div');
+        termRow.id = "term" + i;
+
+        let termImg = document.createElement('img');
+        termImg.src = '/images/' + termImgLinks[i];
+        termImg.classList.add('term-img');
+        termRow.appendChild(termImg);
+
+        let term = document.createElement('div');
+        let termText = document.createElement('span');
+        termText.classList.add('term-text')
+        termText.innerText = terms[i];
+        term.appendChild(termText);
+
+        let match = document.createElement('input');
+        match.type = "hidden";
+        match.value = definitions[i];
+        term.appendChild(match);
+
+        termRow.appendChild(term);
+
+        termRow.draggable = true;
+        termRow.ondragover = function (e) {
+            e.preventDefault();
+        }
+        termRow.ondragstart = function (e) {
+            beingDragged = termRow;
+        }
+
+        termRow.ondrop = function (e) {
+            if (match.value == beingDragged.getElementsByClassName('term-text')[0].innerText) {
+                termRow.classList.add('correct-highlight');
+                beingDragged.classList.add('correct-highlight');
+                totalMatched++;
+
+                if (totalMatched >= totalToMatch) {
+                    nextButton.classList.remove('hidden');
+                }
+            }
+        }
+
+        leftCon.appendChild(termRow);
+        totalToMatch++;
+    }
+
+    let rightCon = document.createElement('div');
+    rightCon.classList.add('term-container');
+
+    for (let j in definitions) {
+        let defRow = document.createElement('div');
+        defRow.id = "def" + j;
+
+        let defImg = document.createElement('img');
+        defImg.src = '/images/' + defImgLinks[j];
+        defImg.classList.add('term-img');
+        defRow.appendChild(defImg);
+
+        let definition = document.createElement('div');
+        let defText = document.createElement('span');
+        defText.innerText = definitions[j];
+        defText.classList.add('term-text');
+        definition.appendChild(defText);
+
+        let match = document.createElement('input');
+        match.type = "hidden";
+        match.value = terms[j];
+        definition.appendChild(match);
+
+        defRow.appendChild(definition);
+
+        defRow.draggable = true;
+        defRow.ondragover = function (e) {
+            e.preventDefault();
+        }
+        defRow.ondragstart = function (e) {
+            beingDragged = defRow;
+        }
+        defRow.ondrop = function (e) {
+            if (match.value == beingDragged.getElementsByClassName('term-text')[0].innerText) {
+                defRow.classList.add('correct-highlight');
+                beingDragged.classList.add('correct-highlight');
+                totalMatched++;
+
+                if (totalMatched >= totalToMatch) {
+                    nextButton.classList.remove('hidden');
+                }
+            }
+        }
+
+        rightCon.appendChild(defRow);
+    }
+
+    let rightConShuffled = document.createElement('div');
+    rightConShuffled.classList.add('term-container');
+
+    while (rightCon.children.length > 0) {
+        childEle = rightCon.children[Math.floor(Math.random() * rightCon.children.length)];
+        rightConShuffled.appendChild(childEle);
+    }
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = nextExercise;
+    nextButton.innerText = 'Continue';
+    nextButton.classList.add('hidden');
+
+    document.getElementById('exercise-area').appendChild(leftCon);
+    document.getElementById('exercise-area').appendChild(rightConShuffled);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
+
+
 // All other functions
 
 function showLearnedVocab() {
@@ -520,7 +649,7 @@ function showLearnedVocab() {
     let termDefObj = JSON.parse(vocabStr);
 
     let termCon = document.createElement('div');
-    termCon.id = 'term-container';
+    termCon.classList.add('term-container');
 
     for (let i in termDefObj) {
         let termColumn = document.createElement('div');
@@ -626,6 +755,8 @@ function populateFields(lesson, exercise) {
         setupStory(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "storyline-with-blanks") {
         setupStoryWithBlanks(lesson, exercise);
+    } else if (lessonData[lesson][exercise].exerciseType == "matching-v0.2") {
+        setupMatchingv2(lesson, exercise);
     }
 }
 

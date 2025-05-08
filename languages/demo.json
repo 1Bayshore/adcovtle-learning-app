@@ -103,7 +103,15 @@
             "blankAnswers": ["blanks", "blanks"]
         },
         "11": {
-            "exerciseNumber": 11,
+            "exerciseTitle": "v0.2 Items - Matching",
+            "exerciseType": "matching-v0.2",
+            "terms": ["this", "matches", "with", "that"],
+            "definitions": ["this", "matches", "with", "that"],
+            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"],
+            "definitionImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "12": {
+            "exerciseNumber": 12,
             "exerciseTitle": "Finished showing the tutorial",
             "exerciseType": "flashcard",
             "exerciseQuestion": "You've finished the tutorial!",

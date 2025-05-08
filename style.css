@@ -164,14 +164,14 @@ input {
     display: block;
 }
 
-#term-container {
+.term-container {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#term-container div {
+.term-container div {
     flex: 1 0 21%;
     width: 99%;
     text-align: center;
