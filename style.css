@@ -11,7 +11,7 @@ body {
 }
 
 .left-panel-items {
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: calc(-30% - 20px);
     bottom: 0px;
