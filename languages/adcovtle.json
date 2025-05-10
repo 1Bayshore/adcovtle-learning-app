@@ -102,5 +102,67 @@
             "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"],
             "definitionImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         }
+    },
+    "1": {
+        "lessonTitle": "At home",
+        "0": {
+            "exerciseTitle": "What is that?",
+            "exerciseType": "storyline",
+            "story": "The interior of Flac's apartment is not too spacious, but it is well lit by the many windows along the wall. Flac smiles as they show you in.\n\n«This is my apartment,» they say. «I know it's not much, but I hope you enjoy your stay here.»\n\n«It seems lovely,» you say. You walk further into the space, and notice that there's a plate with a ruby in the middle of it sitting on the small table. «What's that?» you ask.\n\n«It's called an orasleda,» Flac says. «It's for keeping food warm. An ordinary plate called a sleda.»\n\n«I need to learn more Adcovtle terms for things,» you say, looking at the table. «For example, what's a chair called again?»\n\nIn this lesson, you will learn Adcovtle terms for household items, and be introduced to how nouns work in Adcovtle. By the end of this lesson, you should be able to name common household items, such as chairs, tables, plates, and beds, plus mark them with appropriate inflections.",
+            "storyImg": "image-coming-soon.svg"
+        },
+        "1": {
+            "exerciseTitle": "Words for household items: part 1",
+            "exerciseType": "terminology-introduction",
+            "terms": ["orasleda", "sleda", "oraci", "sivli"],
+            "definitions": ["gemstone-powered warming plate", "plate", "gemstone", "chair"],
+            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"],
+            "newVocab": {
+                "orasleda": ["gemstone-powered warming plate", "image-coming-soon.svg"],
+                "sleda": ["plate", "image-coming-soon.svg"],
+                "oraci": ["gemstone", "image-coming-soon.svg"],
+                "sivli": ["chair", "image-coming-soon.svg"]
+            }
+        },
+        "2": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "sleda",
+            "choices": ["plate", "gemstone-powered warming plate", "chair", "gemstone"],
+            "correctAnswer": "plate",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "3": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "sivli",
+            "choices": ["plate", "gemstone-powered warming plate", "chair", "gemstone"],
+            "correctAnswer": "chair",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "4": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "oraci",
+            "choices": ["hello", "gemstone-powered warming plate", "thanks", "gemstone"],
+            "correctAnswer": "gemstone",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "5": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "orasleda",
+            "choices": ["hello", "gemstone-powered warming plate", "thanks", "gemstone"],
+            "correctAnswer": "gemstone-powered warming plate",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "6": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "tle",
+            "choices": ["hello", "gemstone-powered warming plate", "thanks", "gemstone"],
+            "correctAnswer": "thanks",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        }
     }
 }

@@ -13348,5 +13348,26 @@
             "dataComprehension": "metlevda",
             "partOfSpeech": "interjection"
         }
+    },
+    {
+        "English": {
+            "word": "plate"
+        },
+        "adcovtle": {
+            "word": "sleda",
+            "dataComprehension": "sleda",
+            "partOfSpeech": "noun"
+        }
+            
+    },
+    {
+        "English": {
+            "word": "gemstone-powered warming plate"
+        },
+        "adcovtle": {
+            "word": "orasleda",
+            "dataComprehension": "orasleda",
+            "partOfSpeech": "noun"
+        }
     }
 ]
