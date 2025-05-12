@@ -111,7 +111,13 @@
             "definitionImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         },
         "12": {
-            "exerciseNumber": 12,
+            "exerciseTitle": "v0.3 Items - In-language storyline with translation",
+            "exerciseType": "storyline-with-translations",
+            "story": "Storylines like this one will come with translations of words that appear on click. These translations are generated from the previously learned vocabulary.",
+            "storyImg": "image-coming-soon.svg"
+        },
+        "13": {
+            "exerciseNumber": 13,
             "exerciseTitle": "Finished showing the tutorial",
             "exerciseType": "flashcard",
             "exerciseQuestion": "You've finished the tutorial!",

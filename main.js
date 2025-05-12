@@ -697,6 +697,62 @@ function setupMatchingv2(lesson, exercise) {
     document.getElementById('exercise-area').appendChild(nextButton);
 }
 
+function setupStoryWithTranslations(lesson, exercise) {
+    clearDefaults();
+
+    let storyline = lessonData[lesson][exercise].story;
+    let storyImgLink = lessonData[lesson][exercise].storyImg;
+
+    let storyImgContainer = document.createElement('div');
+    let storyImgEle = document.createElement('img');
+    storyImgEle.src = "/images/" + storyImgLink;
+    storyImgEle.id = 'story-image';
+    storyImgContainer.appendChild(storyImgEle);
+
+    let storyEle = document.createElement('div');
+    let storyWords = storyline.split(' ');
+    for (let i in storyWords) {
+        let wordEle = document.createElement('span');
+        let popupEle;
+        wordEle.innerText = storyWords[i] + ' ';
+        wordEle.onclick = function (e) {
+            if (popupEle != null) {
+                popupEle.parentElement.removeChild(popupEle);
+                popupEle = null;
+                return;
+            }
+            let definition;
+            try {
+                definition = JSON.parse(getCookie(currentUser + currentLearningLanguage + 'learnedVocab'))[storyWords[i]][0];
+            } catch {
+                definition = undefined;
+            }
+            if (definition == undefined) {
+                definition = 'definition not found';
+            }
+            popupEle = document.createElement('span');
+            popupEle.classList.add('popup-element');
+            popupEle.innerText = definition;
+            popupEle.style.left = wordEle.offsetLeft + 'px';
+            popupEle.style.top = wordEle.offsetTop + wordEle.getBoundingClientRect().height + 'px';
+            popupEle.onclick = function (e) {
+                popupEle.parentElement.removeChild(popupEle);
+                popupEle = null;
+            }
+            storyEle.appendChild(popupEle);
+        }
+        storyEle.appendChild(wordEle);
+    }
+
+    let nextButton = document.createElement('button');
+    nextButton.id = 'next-button';
+    nextButton.onclick = nextExercise;
+    nextButton.innerText = 'Continue';
+
+    document.getElementById('exercise-area').appendChild(storyImgContainer);
+    document.getElementById('exercise-area').appendChild(storyEle);
+    document.getElementById('exercise-area').appendChild(nextButton);
+}
 
 // All other functions
 
@@ -832,6 +888,8 @@ function populateFields(lesson, exercise) {
         setupStoryWithBlanks(lesson, exercise);
     } else if (lessonData[lesson][exercise].exerciseType == "matching-v0.2") {
         setupMatchingv2(lesson, exercise);
+    } else if (lessonData[lesson][exercise].exerciseType == "storyline-with-translations") {
+        setupStoryWithTranslations(lesson, exercise);
     }
 }
 
