@@ -13369,5 +13369,15 @@
             "dataComprehension": "orasleda",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "bowl"
+        },
+        "adcovtle": {
+            "word": "tlindo",
+            "dataComprehension": "tlindo",
+            "partOfSpeech": "noun"
+        }
     }
 ]

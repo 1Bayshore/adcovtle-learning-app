@@ -163,6 +163,70 @@
             "choices": ["hello", "gemstone-powered warming plate", "thanks", "gemstone"],
             "correctAnswer": "thanks",
             "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "7": {
+            "exerciseTitle": "How many bowls?",
+            "exerciseType": "storyline",
+            "story": "Flac sets out two bowls, and places a pot of soup in the middle of the table. «I hope you enjoy this soup,» they say. «It has a special type of soft cheese from Ðestli.»\n\n«Tle!» you say. «It looks delicious.»\n\nAs they fill the bowls with soup, Flac says, «It's funny how English counts more than one of anything as plural. I mean, why is it one bowl, many bowls, but two bowls?»\n\n«How does it work in Adcovtle?» you ask.\n\n«It makes a lot more sense to me,» Flac says. «Latlindo: one bowl. Tetlindo: many bowls. Do latlindo: two bowls.»\n\n«Interesting,» you say. «That's definitely different from English...»",
+            "storyImg": "image-coming-soon.svg"
+        },
+        "8": {
+            "exerciseTitle": "Words for household items: part 2",
+            "exerciseType": "terminology-introduction",
+            "terms": ["tlindo", "trusi", "jaña", "cici"],
+            "definitions": ["bowl", "table", "bed", "cheese"],
+            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"],
+            "newVocab": {
+                "tlindo": ["bowl", "image-coming-soon.svg"],
+                "trusi": ["table", "image-coming-soon.svg"],
+                "jaña": ["bed", "image-coming-soon.svg"],
+                "cici": ["cheese", "image-coming-soon.svg"]
+            }
+        },
+        "9": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "tlindo",
+            "choices": ["table", "bowl", "bed", "cheese"],
+            "correctAnswer": "bowl",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "10": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "cici",
+            "choices": ["table", "bowl", "bed", "cheese"],
+            "correctAnswer": "cheese",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "11": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "trusi",
+            "choices": ["table", "goodbye", "bed", "hello"],
+            "correctAnswer": "table",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "12": {
+            "exerciseTitle": "Practise: Choose the correct definition",
+            "exerciseType": "multiple-choice-v0.2",
+            "term": "jaña",
+            "choices": ["table", "goodbye", "bed", "hello"],
+            "correctAnswer": "bed",
+            "choiceImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
+        },
+        "13": {
+            "exerciseTitle": "Adcovtle countable and uncountable prefixes",
+            "exerciseType": "storyline",
+            "story": "Adcovtle has two prefixes for nouns which mark whether the noun is countable or uncountable. These prefixes are «la-» for countable and «te-» for uncountable.\n\nIn Adcovtle, countable prefixes are used for any number that can be counted, even if in English it would be marked plural. For example...",
+            "storyImg": "image-coming-soon.svg"
+        },
+        "14": {
+            "exerciseTitle": "Adcovtle countable and uncountable prefixes: example",
+            "exerciseType": "terminology-introduction",
+            "terms": ["latlindo", "tetlindo", "do latlindo"],
+            "definitions": ["(one) bowl", "(many) bowls", "two bowls"],
+            "termImgs": ["image-coming-soon.svg", "image-coming-soon.svg", "image-coming-soon.svg"]
         }
     }
 }
