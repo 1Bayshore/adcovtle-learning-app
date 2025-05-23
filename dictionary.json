@@ -9286,6 +9286,9 @@
             "word": "þenat",
             "dataComprehension": "þenat",
             "partOfSpeech": "noun"
+        },
+        "Plunåte": {
+            "word": "ɒçopi"
         }
     },
     {
@@ -9305,6 +9308,10 @@
         "Proto-Kwerfia": {
             "word": "desɲos",
             "dataComprehension": "desɲos"
+        },
+        "Plunåte": {
+            "word": "ɒçopiɸekɸosu",
+            "notes": "already inflected"
         }
     },
     {
@@ -9315,6 +9322,10 @@
             "word": "þenatðra",
             "dataComprehension": "þenatðra",
             "partOfSpeech": "noun"
+        },
+        "Plunåte": {
+            "word": "ɒçopiɸeiçefɒ",
+            "notes": "already inflected"
         }
     },
     {
@@ -13423,10 +13434,26 @@
     },
     {
         "English": {
-            "word": "(horse-like creature)"
+            "word": "plunåv"
         },
         "Plunåte": {
             "word": "ho"
+        }
+    },
+    {
+        "English": {
+            "word": "(large warm climate grazing animal)"
+        },
+        "Plunåte": {
+            "word": "çoθti"
+        }
+    },
+    {
+        "English": {
+            "word": "hunter"
+        },
+        "Plunåte": {
+            "word": "tsɒna"
         }
     }
 ]
