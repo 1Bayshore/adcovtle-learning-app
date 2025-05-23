@@ -432,6 +432,10 @@
         "Proto-North-Ovøta": {
             "word": "beŋe",
             "dataComprehension": "beŋe"
+        },
+        "Plunåte": {
+            "word": "se",
+            "notes": "must be conjugated if not used in isolation"
         }
     },
     {
@@ -2010,6 +2014,10 @@
         "Çúaço aʃoevújaço": {
             "word": "vá",
             "dataComprehension": "vá"
+        },
+        "Plunåte": {
+            "word": "mɒ",
+            "notes": "must be conjugated if not used in isolation"
         }
     },
     {
@@ -2053,6 +2061,10 @@
         "Çúaço aʃoevújaço": {
             "word": "vá",
             "dataComprehension": "vá"
+        },
+        "Plunåte": {
+            "word": "mɒ",
+            "notes": "must be conjugated if not used in isolation"
         }
     },
     {
@@ -2367,6 +2379,9 @@
         "Proto-North-Ovøta": {
             "word": "çølakval",
             "dataComprehension": "çølakval"
+        },
+        "Plunåte": {
+            "word": "ɒɸu"
         }
     },
     {
@@ -2502,6 +2517,9 @@
         },
         "Français": {
             "word": "être"
+        },
+        "Plunåte": {
+            "word": "cequ"
         }
     },
     {
@@ -2680,6 +2698,10 @@
         "Proto-North-Ovøta": {
             "word": "domy",
             "dataComprehension": "domy"
+        },
+        "Plunåte": {
+            "word": "mɒ",
+            "notes": "must be conjugated if not used in isolation"
         }
     },
     {
@@ -2710,6 +2732,10 @@
         "Proto-North-Ovøta": {
             "word": "domy",
             "dataComprehension": "domy"
+        },
+        "Plunåte": {
+            "word": "mɒ",
+            "notes": "must be conjugated if not used in isolation"
         }
     },
     {
@@ -3156,6 +3182,10 @@
         "Proto-North-Ovøta": {
             "word": "ylme",
             "dataComprehension": "ylme"
+        },
+        "Plunåte": {
+            "word": "se",
+            "notes": "must be conjugated if not used in isolation"
         }
     },
     {
@@ -11488,6 +11518,9 @@
             "word": "remta",
             "dataComprehension": "remta",
             "partOfSpeech": "adjective"
+        },
+        "Plunåte": {
+            "word": "txaç"
         }
     },
     {
@@ -13378,6 +13411,22 @@
             "word": "tlindo",
             "dataComprehension": "tlindo",
             "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "red meat"
+        },
+        "Plunåte": {
+            "word": "maxqo"
+        }
+    },
+    {
+        "English": {
+            "word": "(horse-like creature)"
+        },
+        "Plunåte": {
+            "word": "ho"
         }
     }
 ]
