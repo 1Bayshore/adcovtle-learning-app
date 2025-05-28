@@ -707,6 +707,9 @@
         },
         "Nojetál": {
             "word": "ciðal"
+        },
+        "Blödadet": {
+            "word": "cida"
         }
     },
     {
@@ -768,6 +771,9 @@
         },
         "Nojetál": {
             "word": "ciðal"
+        },
+        "Blödadet": {
+            "word": "cida"
         },
         "Español": {
             "word": "arbol"
@@ -2481,6 +2487,9 @@
         },
         "Nojetál": {
             "word": "blo"
+        },
+        "Blödadet": {
+            "word": "bla"
         }
     },
     {
@@ -2807,6 +2816,9 @@
         },
         "Nojetál": {
             "word": "atnaulul"
+        },
+        "Blödadet": {
+            "word": "atnaulu"
         }
     },
     {
@@ -4218,6 +4230,9 @@
         },
         "Nojetál": {
             "word": "caþetla"
+        },
+        "Blödadet": {
+            "word": "cadet"
         }
     },
     {
@@ -5839,6 +5854,9 @@
         },
         "Nojetál": {
             "word": "dovrål"
+        },
+        "Blödadet": {
+            "word": "dovrå"
         }
     },
     {
@@ -10139,6 +10157,9 @@
         },
         "Nojetál": {
             "word": "cajtlal"
+        },
+        "Blödadet": {
+            "word": "cala"
         }
     },
     {
@@ -11605,6 +11626,9 @@
         },
         "Nojetál": {
             "word": "tikloçål"
+        },
+        "Blödadet": {
+            "word": "tikložå"
         }
     },
     {
@@ -11839,6 +11863,9 @@
         },
         "Nojetál": {
             "word": "noglåfniçal"
+        },
+        "Blödadet": {
+            "word": "noglafniža"
         }
     },
     {
@@ -13468,6 +13495,9 @@
         },
         "Nojetál": {
             "word": "plunåvul"
+        },
+        "Blödadet": {
+            "word": "plunåvu"
         }
     },
     {
@@ -13492,6 +13522,9 @@
         },
         "Nojetál": {
             "word": "dovre"
+        },
+        "Blödadet": {
+            "word": "döv"
         }
     },
     {
@@ -13500,6 +13533,9 @@
         },
         "Nojetál": {
             "word": "çutlizul"
+        },
+        "Blödadet": {
+            "word": "çütlizu"
         }
     },
     {
@@ -13508,6 +13544,9 @@
         },
         "Nojetál": {
             "word": "noglåfniçal"
+        },
+        "Blödadet": {
+            "word": "noglafniža"
         }
     },
     {
@@ -13516,6 +13555,9 @@
         },
         "Nojetál": {
             "word": "žiklatål"
+        },
+        "Blödadet": {
+            "word": "žikladå"
         }
     },
     {
@@ -13524,6 +13566,9 @@
         },
         "Nojetál": {
             "word": "evikçål"
+        },
+        "Blödadet": {
+            "word": "evikçå"
         }
     },
     {
@@ -13532,6 +13577,9 @@
         },
         "Nojetál": {
             "word": "cajtlål evikçål"
+        },
+        "Blödadet": {
+            "word": "calalevikçå"
         }
     },
     {
@@ -13540,6 +13588,9 @@
         },
         "Nojetál": {
             "word": "ologešal"
+        },
+        "Blödadet": {
+            "word": "olögeža"
         }
     },
     {
@@ -13548,6 +13599,9 @@
         },
         "Nojetál": {
             "word": "åledål"
+        },
+        "Blödadet": {
+            "word": "aledå"
         }
     },
     {
@@ -13556,6 +13610,9 @@
         },
         "Nojetál": {
             "word": "klågomul"
+        },
+        "Blödadet": {
+            "word": "klågomu"
         }
     },
     {
@@ -13564,6 +13621,9 @@
         },
         "Nojetál": {
             "word": "ologešal blo atnaulul"
+        },
+        "Blödadet": {
+            "word": "olögežalöatnaulu (atnaulu)"
         }
     },
     {
@@ -13572,6 +13632,9 @@
         },
         "Nojetál": {
             "word": "ologešal blo caþetla"
+        },
+        "Blödadet": {
+            "word": "olögežalödadet (dadet)"
         }
     }
 ]
