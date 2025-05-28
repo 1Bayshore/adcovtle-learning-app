@@ -709,7 +709,8 @@
             "word": "ciðal"
         },
         "Blödadet": {
-            "word": "cida"
+            "word": "cida",
+            "notes": "feminine"
         }
     },
     {
@@ -773,7 +774,8 @@
             "word": "ciðal"
         },
         "Blödadet": {
-            "word": "cida"
+            "word": "cida",
+            "notes": "feminine"
         },
         "Español": {
             "word": "arbol"
@@ -2818,7 +2820,8 @@
             "word": "atnaulul"
         },
         "Blödadet": {
-            "word": "atnaulu"
+            "word": "atnaulu",
+            "notes": "masculine"
         }
     },
     {
@@ -4232,7 +4235,8 @@
             "word": "caþetla"
         },
         "Blödadet": {
-            "word": "cadet"
+            "word": "cadet",
+            "notes": "masculine"
         }
     },
     {
@@ -5856,7 +5860,8 @@
             "word": "dovrål"
         },
         "Blödadet": {
-            "word": "dovrå"
+            "word": "dovrå",
+            "notes": "(third gender)"
         }
     },
     {
@@ -11628,7 +11633,8 @@
             "word": "tikloçål"
         },
         "Blödadet": {
-            "word": "tikložå"
+            "word": "tikložå",
+            "notes": "(third gender)"
         }
     },
     {
@@ -11865,7 +11871,8 @@
             "word": "noglåfniçal"
         },
         "Blödadet": {
-            "word": "noglafniža"
+            "word": "noglafniža",
+            "notes": "feminine"
         }
     },
     {
@@ -13497,7 +13504,8 @@
             "word": "plunåvul"
         },
         "Blödadet": {
-            "word": "plunåvu"
+            "word": "plunåvu",
+            "notes": "masculine"
         }
     },
     {
@@ -13535,7 +13543,8 @@
             "word": "çutlizul"
         },
         "Blödadet": {
-            "word": "çütlizu"
+            "word": "çütlizu",
+            "notes": "masculine"
         }
     },
     {
@@ -13546,7 +13555,8 @@
             "word": "noglåfniçal"
         },
         "Blödadet": {
-            "word": "noglafniža"
+            "word": "noglafniža",
+            "notes": "feminine"
         }
     },
     {
@@ -13557,7 +13567,8 @@
             "word": "žiklatål"
         },
         "Blödadet": {
-            "word": "žikladå"
+            "word": "žikladå",
+            "notes": "(third gender)"
         }
     },
     {
@@ -13568,7 +13579,8 @@
             "word": "evikçål"
         },
         "Blödadet": {
-            "word": "evikçå"
+            "word": "evikçå",
+            "notes": "(third gender)"
         }
     },
     {
@@ -13579,7 +13591,8 @@
             "word": "cajtlål evikçål"
         },
         "Blödadet": {
-            "word": "calalevikçå"
+            "word": "calalevikçå",
+            "notes": "(third gender)"
         }
     },
     {
@@ -13590,7 +13603,8 @@
             "word": "ologešal"
         },
         "Blödadet": {
-            "word": "olögeža"
+            "word": "olögeža",
+            "notes": "feminine"
         }
     },
     {
@@ -13601,7 +13615,8 @@
             "word": "åledål"
         },
         "Blödadet": {
-            "word": "aledå"
+            "word": "aledå",
+            "notes": "(third gender)"
         }
     },
     {
@@ -13612,7 +13627,8 @@
             "word": "klågomul"
         },
         "Blödadet": {
-            "word": "klågomu"
+            "word": "klågomu",
+            "notes": "masculine"
         }
     },
     {
@@ -13623,7 +13639,8 @@
             "word": "ologešal blo atnaulul"
         },
         "Blödadet": {
-            "word": "olögežalöatnaulu (atnaulu)"
+            "word": "olögežalöatnaulu (atnaulu)",
+            "notes": "masculine"
         }
     },
     {
@@ -13634,7 +13651,8 @@
             "word": "ologešal blo caþetla"
         },
         "Blödadet": {
-            "word": "olögežalödadet (dadet)"
+            "word": "olögežalödadet (dadet)",
+            "notes": "feminine"
         }
     }
 ]
