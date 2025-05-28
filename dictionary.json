@@ -703,7 +703,10 @@
         },
         "Ligu magyk": {
             "word": "səkhol",
-            "dataComprehension": "səkhol"
+            "dataCo,mprehension": "səkhol"
+        },
+        "Nojetál": {
+            "word": "ciðal"
         }
     },
     {
@@ -762,6 +765,9 @@
         "çyntoçana - 2000 BC": {
             "word": "byra",
             "dataComprehension": "byra"
+        },
+        "Nojetál": {
+            "word": "ciðal"
         },
         "Español": {
             "word": "arbol"
@@ -2472,6 +2478,9 @@
         "peküzhí Nakiwá": {
             "word": "shi",
             "dataComprehension": "ši"
+        },
+        "Nojetál": {
+            "word": "blo"
         }
     },
     {
@@ -2795,6 +2804,9 @@
         "Çúaço aʃoevújaço": {
             "word": "ʃuiʒáço",
             "dataComprehension": "ʃuiʒáço"
+        },
+        "Nojetál": {
+            "word": "atnaulul"
         }
     },
     {
@@ -4203,6 +4215,9 @@
         "çyntoçana - 2000 BC": {
             "word": "ɲano",
             "dataComprehension": "ɲano"
+        },
+        "Nojetál": {
+            "word": "caþetla"
         }
     },
     {
@@ -5821,6 +5836,9 @@
         "çyntoçana - 2000 BC": {
             "word": "ɣøgo",
             "dataComprehension": "ɣøgo"
+        },
+        "Nojetál": {
+            "word": "dovrål"
         }
     },
     {
@@ -10118,6 +10136,9 @@
             "word": "clo",
             "dataComprehension": "clo",
             "partOfSpeech": "preposition"
+        },
+        "Nojetál": {
+            "word": "cajtlal"
         }
     },
     {
@@ -11581,6 +11602,9 @@
         "Proto-Kwerfia": {
             "word": "akwani",
             "dataComprehension": "akwani"
+        },
+        "Nojetál": {
+            "word": "tikloçål"
         }
     },
     {
@@ -11812,6 +11836,9 @@
             "word": "pazaðri",
             "dataComprehension": "pazaðri",
             "partOfSpeech": "noun"
+        },
+        "Nojetál": {
+            "word": "noglåfniçal"
         }
     },
     {
@@ -13438,6 +13465,9 @@
         },
         "Plunåte": {
             "word": "ho"
+        },
+        "Nojetál": {
+            "word": "plunåvul"
         }
     },
     {
@@ -13454,6 +13484,94 @@
         },
         "Plunåte": {
             "word": "tsɒna"
+        }
+    },
+    {
+        "English": {
+            "word": "to burn"
+        },
+        "Nojetál": {
+            "word": "dovre"
+        }
+    },
+    {
+        "English": {
+            "word": "large bay in central Klåneva"
+        },
+        "Nojetál": {
+            "word": "çutlizul"
+        }
+    },
+    {
+        "English": {
+            "word": "Klåneva region A"
+        },
+        "Nojetál": {
+            "word": "noglåfniçal"
+        }
+    },
+    {
+        "English": {
+            "word": "(ordinary pyrophilic shrub)"
+        },
+        "Nojetál": {
+            "word": "žiklatål"
+        }
+    },
+    {
+        "English": {
+            "word": "(fire magic seed dispersal shrub)"
+        },
+        "Nojetál": {
+            "word": "evikçål"
+        }
+    },
+    {
+        "English": {
+            "word": "(fire magic)"
+        },
+        "Nojetál": {
+            "word": "cajtlål evikçål"
+        }
+    },
+    {
+        "English": {
+            "word": "(small flycatcher bird)"
+        },
+        "Nojetál": {
+            "word": "ologešal"
+        }
+    },
+    {
+        "English": {
+            "word": "(small cat)"
+        },
+        "Nojetál": {
+            "word": "åledål"
+        }
+    },
+    {
+        "English": {
+            "word": "(staple root vegetable)"
+        },
+        "Nojetál": {
+            "word": "klågomul"
+        }
+    },
+    {
+        "English": {
+            "word": "(religious academy city)"
+        },
+        "Nojetál": {
+            "word": "ologešal blo atnaulul"
+        }
+    },
+    {
+        "English": {
+            "word": "(secular academy city)"
+        },
+        "Nojetál": {
+            "word": "ologešal blo caþetla"
         }
     }
 ]
