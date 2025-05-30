@@ -13666,5 +13666,53 @@
             "word": "sadütla",
             "notes": "feminine"
         }
+    },
+    {
+        "English": {
+            "word": "pebble"
+        },
+        "Nojetál": {
+            "word": "matlenal"
+        },
+        "Blödadet": {
+            "word": "matlena",
+            "notes": "feminine"
+        }
+    },
+    {
+        "English": {
+            "word": "highly estemed man"
+        },
+        "Nojetál": {
+            "word": "çuntliul"
+        },
+        "Blödadet": {
+            "word": "çünliu",
+            "notes": "masculine"
+        }
+    },
+    {
+        "English": {
+            "word": "bringer of gifts"
+        },
+        "Nojetál": {
+            "word": "hågfubul"
+        },
+        "Blödadet": {
+            "word": "hågfubu",
+            "notes": "masculine"
+        }
+    },
+    {
+        "English": {
+            "word": "heart"
+        },
+        "Nojetál": {
+            "word": "isofipul"
+        },
+        "Blödadet": {
+            "word": "izövibu",
+            "notes": "masculine"
+        }
     }
 ]
