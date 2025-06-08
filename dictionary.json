@@ -3870,7 +3870,7 @@
     },
     {
         "English": {
-            "word": "1"
+            "word": "true"
         },
         "adcovtle": {
             "word": "ðobodgi",
@@ -3880,7 +3880,7 @@
     },
     {
         "English": {
-            "word": "0"
+            "word": "false"
         },
         "adcovtle": {
             "word": "nobodgi",
@@ -13713,6 +13713,86 @@
         "Blödadet": {
             "word": "izövibu",
             "notes": "masculine"
+        }
+    },
+    {
+        "English": {
+            "word": "journey"
+        },
+        "adcovtle": {
+            "word": "icalepav",
+            "dataComprehension": "icalepav",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to travel"
+        },
+        "adcovtle": {
+            "word": "icalepav",
+            "dataComprehension": "icalepav",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "member of parliament"
+        },
+        "adcovtle": {
+            "word": "adpazadapalavi",
+            "dataComprehension": "adpazadapalavi",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "song"
+        },
+        "adcovtle": {
+            "word": "slaþá",
+            "dataComprehension": "slaþa",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to sing"
+        },
+        "adcovtle": {
+            "word": "aslaþá",
+            "dataComprehension": "aslaþa",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "slogan, motto"
+        },
+        "adcovtle": {
+            "word": "slaþávia",
+            "dataComprehension": "slaþavia",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "birdsong"
+        },
+        "adcovtle": {
+            "word": "slaþávia",
+            "dataComprehension": "slaþavia",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "sail"
+        },
+        "adcovtle": {
+            "word": "abeni",
+            "dataComprehension": "abeni",
+            "partOfSpeech": "verb"
         }
     }
 ]
