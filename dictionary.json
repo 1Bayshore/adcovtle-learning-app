@@ -13794,5 +13794,45 @@
             "dataComprehension": "abeni",
             "partOfSpeech": "verb"
         }
+    },
+    {
+        "English": {
+            "word": "customer"
+        },
+        "adcovtle": {
+            "word": "bovarli",
+            "dataComprehension": "bovarli",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to buy"
+        },
+        "adcovtle": {
+            "word": "henogi",
+            "dataComprehension": "henogi",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "tradition"
+        },
+        "adcovtle": {
+            "word": "canepaz",
+            "dataComprehension": "canepaz",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "traditional"
+        },
+        "adcovtle": {
+            "word": "alcanepaz",
+            "dataComprehension": "alcanepaz",
+            "partOfSpeech": "noun"
+        }
     }
 ]
