@@ -13834,5 +13834,135 @@
             "dataComprehension": "alcanepaz",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "to prepare"
+        },
+        "adcovtle": {
+            "word": "ecisla",
+            "dataComprehension": "ecisla",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "to throw away, to discard"
+        },
+        "adcovtle": {
+            "word": "aþúc",
+            "dataComprehension": "aþuc",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "to edit, to change"
+        },
+        "adcovtle": {
+            "word": "atluni",
+            "dataComprehension": "atlnuni",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "editor"
+        },
+        "adcovtle": {
+            "word": "setluni",
+            "dataComprehension": "setluni",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "writer"
+        },
+        "adcovtle": {
+            "word": "selecri",
+            "dataComprehension": "selecri",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "secret"
+        },
+        "adcovtle": {
+            "word": "pebaseclu",
+            "dataComprehension": "pebaseclu",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "secret"
+        },
+        "adcovtle": {
+            "word": "pebaseclu",
+            "dataComprehension": "pebaseclu",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "choice"
+        },
+        "adcovtle": {
+            "word": "awalá",
+            "dataComprehension": "awalá",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to try"
+        },
+        "adcovtle": {
+            "word": "aluzuz",
+            "dataComprehension": "aluzuz",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "encoding"
+        },
+        "adcovtle": {
+            "word": "baða",
+            "dataComprehension": "baða",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "column"
+        },
+        "adcovtle": {
+            "word": "zuciducle",
+            "dataComprehension": "zuciducle",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to destroy"
+        },
+        "adcovtle": {
+            "word": "ablúi",
+            "dataComprehension": "ablui",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "medicine"
+        },
+        "adcovtle": {
+            "word": "bribra",
+            "dataComprehension": "bribra",
+            "partOfSpeech": "noun"
+        }
     }
 ]
