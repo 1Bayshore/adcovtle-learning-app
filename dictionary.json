@@ -5574,6 +5574,11 @@
             "word": "bonbon",
             "notes": "animate",
             "dataComprehension": "bonbon"
+        },
+        "adcovtle": {
+            "word": "iþúgali",
+            "dataComprehension": "iþugali",
+            "partOfSpeech": "noun"
         }
     },
     {
@@ -13963,6 +13968,46 @@
             "word": "bribra",
             "dataComprehension": "bribra",
             "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "almost, quite"
+        },
+        "adcovtle": {
+            "word": "pri",
+            "dataComprehension": "pri",
+            "partOfSpeech": "preposition"
+        }
+    },
+    {
+        "English": {
+            "word": "issue, problem"
+        },
+        "adcovtle": {
+            "word": "nape",
+            "dataComprehension": "nape",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "formal"
+        },
+        "adcovtle": {
+            "word": "borþo",
+            "dataComprehension": "borþo",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "to wear"
+        },
+        "adcovtle": {
+            "word": "abaða",
+            "dataComprehension": "abaða",
+            "partOfSpeech": "verb"
         }
     }
 ]
