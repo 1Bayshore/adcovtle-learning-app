@@ -4344,6 +4344,11 @@
         "English": {
             "word": "port"
         },
+        "adcovtle": {
+            "word": "aþmu",
+            "dataComprehension": "aþmu",
+            "partOfSpeech": "noun"
+        },
         "Senta Grèstilsa": {
             "word": "ište",
             "dataComprehension": "ište"
@@ -14008,6 +14013,26 @@
             "word": "abaða",
             "dataComprehension": "abaða",
             "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "storm"
+        },
+        "adcovtle": {
+            "word": "ataþun",
+            "dataComprehension": "ataþun",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "ship"
+        },
+        "adcovtle": {
+            "word": "ðmuzte",
+            "dataComprehension": "ðmuzte",
+            "partOfSpeech": "noun"
         }
     }
 ]
