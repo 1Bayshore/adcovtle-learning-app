@@ -14034,5 +14034,25 @@
             "dataComprehension": "ðmuzte",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "too, again"
+        },
+        "adcovtle": {
+            "word": "adel",
+            "dataComprehension": "adel",
+            "partOfSpeech": "adverb"
+        }
+    },
+    {
+        "English": {
+            "word": "onion"
+        },
+        "adcovtle": {
+            "word": "ñozu",
+            "dataComprehension": "ñozu",
+            "partOfSpeech": "noun"
+        }
     }
 ]
