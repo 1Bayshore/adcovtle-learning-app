@@ -14054,5 +14054,44 @@
             "dataComprehension": "ñozu",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "screw"
+        },
+        "adcovtle": {
+            "word": "aruna",
+            "dataComprehension": "aruna",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to learn"
+        },
+        "adcovtle": {
+            "word": "aseclin",
+            "dataComprehension": "aseclin",
+            "partOfSpeech": "verb"        }
+    },
+    {
+        "English": {
+            "word": "crazy"
+        },
+        "adcovtle": {
+            "word": "acalu",
+            "dataComprehension": "acalu",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "penis"
+        },
+        "adcovtle": {
+            "word": "iwiglo",
+            "dataComprehension": "iwiglo",
+            "partOfSpeech": "noun"
+        }
     }
 ]
