@@ -8293,6 +8293,11 @@
         "English": {
             "word": "cave"
         },
+        "adcovtle": {
+            "word": "duclidé",
+            "dataComprehension": "duclide",
+            "partOfSpeech": "noun"
+        },
         "çymtoçamao - 5000 BC": {
             "word": "dunki",
             "dataComprehension": "dunki"
@@ -14091,6 +14096,26 @@
         "adcovtle": {
             "word": "iwiglo",
             "dataComprehension": "iwiglo",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "prisoner"
+        },
+        "adcovtle": {
+            "word": "pegrað",
+            "dataComprehension": "pegrað",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "wall"
+        },
+        "adcovtle": {
+            "word": "blom",
+            "dataComprehension": "blom",
             "partOfSpeech": "noun"
         }
     }
