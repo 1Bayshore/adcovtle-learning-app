@@ -14118,5 +14118,65 @@
             "dataComprehension": "blom",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "vegetable"
+        },
+        "adcovtle": {
+            "word": "ilica",
+            "dataComprehension": "ilica",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "kiss"
+        },
+        "adcovtle": {
+            "word": "atac",
+            "dataComprehension": "atac",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "copper"
+        },
+        "adcovtle": {
+            "word": "ploca",
+            "dataComprehension": "ploca",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "museum"
+        },
+        "adcovtle": {
+            "word": "ðlini",
+            "dataComprehension": "ðlini",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "clock"
+        },
+        "adcovtle": {
+            "word": "lohasi",
+            "dataComprehension": "lohasi",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "compass"
+        },
+        "adcovtle": {
+            "word": "vewiþveci",
+            "dataComprehension": "vewiþveci",
+            "partOfSpeech": "noun"
+        }
     }
 ]
