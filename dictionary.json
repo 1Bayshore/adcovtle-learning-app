@@ -638,6 +638,10 @@
         "Ligu magyk": {
             "word": "fetu",
             "dataComprehension": "fetu"
+        },
+        "Šelva Enkan": {
+            "word": "kholtyo",
+            "dataComprehension": "kholtyo"
         }
     },
     {
@@ -3416,6 +3420,10 @@
         "Çúaço aʃoevújaço": {
             "word": "aʃoevújaço",
             "dataComprehension": "aʃoevújaço"
+        },
+        "Senta Grèstilsa": {
+            "word": "vèxux",
+            "dataComprehension": "vèxux"
         }
     },
     {
@@ -6985,6 +6993,10 @@
             "word": "gerongon",
             "dataComprehension": "gerongon",
             "partOfSpeech": "noun"
+        },
+        "Šelva Enkan": {
+            "word": "sadyaše",
+            "dataComprehension": "sadyaše"
         }
     },
     {
@@ -8872,6 +8884,11 @@
         "çyntoçana - 2000 BC": {
             "word": "çøure",
             "dataComprehension": "çøure"
+        },
+        "adcovtle": {
+            "word": "tablac",
+            "dataComprehension": "tablac",
+            "partOfSpeech": "noun"
         }
     },
     {
@@ -10980,6 +10997,10 @@
             "word": "revol",
             "dataComprehension": "revol",
             "partOfSpeech": "noun"
+        },
+        "Fole Enkan": {
+            "word": "tšiledya",
+            "dataComprehension": "tšiledya"
         }
     },
     {
@@ -12191,6 +12212,10 @@
         "Fashiikéfa": {
             "word": "bbösh",
             "dataComprehension": "bbösh"
+        },
+        "Senta Grèstilsa": {
+            "word": "xich",
+            "dataComprehension": "xich"
         }
     },
     {
@@ -12205,6 +12230,10 @@
         "Fashiikéfa": {
             "word": "áán",
             "dataComprehension": "áán"
+        },
+        "Senta Grèstilsa": {
+            "word": "gèm",
+            "dataComprehension": "gèm"
         }
     },
     {
@@ -12774,6 +12803,10 @@
             "word": "gobleva",
             "dataComprehension": "gobleva",
             "partOfSpeech": "noun"
+        },
+        "Mēeu Gēo": {
+            "word": "voigai",
+            "dataComprehension": "voigai"
         }
     },
     {
@@ -14111,11 +14144,21 @@
     },
     {
         "English": {
-            "word": "wall"
+            "word": "wall (of a building)"
         },
         "adcovtle": {
             "word": "blom",
             "dataComprehension": "blom",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "wall (of a city)"
+        },
+        "adcovtle": {
+            "word": "calcí",
+            "dataComprehension": "calci",
             "partOfSpeech": "noun"
         }
     },
@@ -14177,6 +14220,264 @@
             "word": "vewiþveci",
             "dataComprehension": "vewiþveci",
             "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to bake"
+        },
+        "adcovtle": {
+            "word": "atlume",
+            "dataComprehension": "atlume",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "baked good"
+        },
+        "adcovtle": {
+            "word": "tlume",
+            "dataComprehension": "tlume",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "baker's"
+        },
+        "adcovtle": {
+            "word": "hetlume",
+            "dataComprehension": "hetlume",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "market"
+        },
+        "adcovtle": {
+            "word": "heave",
+            "dataComprehension": "heave",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "key (of a map)"
+        },
+        "adcovtle": {
+            "word": "lentliðne",
+            "dataComprehension": "lentliðne",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "curve"
+        },
+        "adcovtle": {
+            "word": "suclani",
+            "dataComprehension": "suclani",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "port"
+        },
+        "adcovtle": {
+            "word": "plig",
+            "dataComprehension": "plig",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "iron"
+        },
+        "adcovtle": {
+            "word": "gocbló",
+            "dataComprehension": "gocblo",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "steel"
+        },
+        "adcovtle": {
+            "word": "higocbló",
+            "dataComprehension": "higocblo",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "scene (in a play)"
+        },
+        "adcovtle": {
+            "word": "pluctuc",
+            "dataComprehension": "pluctuc",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to leave"
+        },
+        "adcovtle": {
+            "word": "apedan",
+            "dataComprehension": "apedan",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "left"
+        },
+        "adcovtle": {
+            "word": "vebom",
+            "dataComprehension": "vebom",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "right"
+        },
+        "adcovtle": {
+            "word": "vehel",
+            "dataComprehension": "vehel",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "job"
+        },
+        "adcovtle": {
+            "word": "bevlat",
+            "dataComprehension": "bevlat",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "centre"
+        },
+        "adcovtle": {
+            "word": "zebli",
+            "dataComprehension": "zebli",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "appointed representive of Glisng in Covtle (historical)"
+        },
+        "adcovtle": {
+            "word": "dagi",
+            "dataComprehension": "dagi",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "dream"
+        },
+        "Cjëmta": {
+            "word": "âzjigjë",
+            "dataComprehension": "azjigjë"
+        }
+    },
+    {
+        "English": {
+            "word": "silver piece, also currency of zhi Nakiwá"
+        },
+        "peküzhí Nakiwá": {
+            "word": "no ödéga",
+            "dataComprehension": "no ödega"
+        }
+    },
+    {
+        "English": {
+            "word": "sex (like having sex)"
+        },
+        "adcovtle": {
+            "word": "witla",
+            "dataComprehension": "witla",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to have sex"
+        },
+        "adcovtle": {
+            "word": "awitla",
+            "dataComprehension": "awitla",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "lesbian"
+        },
+        "adcovtle": {
+            "word": "doðra",
+            "dataComprehension": "doðra",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "gay man"
+        },
+        "adcovtle": {
+            "word": "lanðevlan",
+            "dataComprehension": "lanðevlan",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "gynophilic"
+        },
+        "adcovtle": {
+            "word": "ðevðra",
+            "dataComprehension": "ðevðra",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "androphilic"
+        },
+        "adcovtle": {
+            "word": "ðevlan",
+            "dataComprehension": "ðevlan",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "level (of education)"
+        },
+        "adcovtle": {
+            "word": "nitli",
+            "dataComprehension": "nitli",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "class (of a railway carriage)"
+        },
+        "adcovtle": {
+            "word": "nitli",
+            "dataComprehension": "nitli",
+            "partOfSpeech": "adjective"
         }
     }
 ]
