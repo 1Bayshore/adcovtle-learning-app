@@ -14489,5 +14489,15 @@
             "dataComprehension": "nitli",
             "partOfSpeech": "adjective"
         }
+    },
+    {
+        "English": {
+            "word": "interior"
+        },
+        "adcovtle": {
+            "word": "snaþi",
+            "dataComprehension": "snaþi",
+            "partOfSpeech": "adjective"
+        }
     }
 ]
