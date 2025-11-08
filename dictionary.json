@@ -1385,6 +1385,10 @@
             "word": "elecri",
             "dataComprehension": "elecri",
             "partOfSpeech": "verb"
+        },
+        "Jotanekasí": {
+            "word": "pokáne",
+            "dataComprehension": "pokane"
         }
     },
     {
@@ -3713,6 +3717,10 @@
         "çyntoçana - 2000 BC": {
             "word": "çynto",
             "dataComprehension": "çynto"
+        },
+        "Fole Enkan": {
+            "word": "ytoktya",
+            "dataComprehension": "ytoktya"
         }
     },
     {
@@ -7514,6 +7522,10 @@
             "word": "zita",
             "dataComprehension": "zita",
             "partOfSpeech": "noun"
+        },
+        "Jotanekasí": {
+            "word": "kílu",
+            "dataComprehension": "kilu"
         }
     },
     {
@@ -9803,6 +9815,11 @@
             "word": "añatluvo",
             "dataComprehension": "añatluvo",
             "partOfSpeech": "verb"
+        },
+        "Fole Enkan": {
+            "word": "etša",
+            "dataComprehension": "etša",
+            "notes": "especially relgious cleaning ceremonies"
         }
     },
     {
@@ -14506,6 +14523,15 @@
             "word": "snaþi",
             "dataComprehension": "snaþi",
             "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "poem"
+        },
+        "Jotanekasí": {
+            "word": "łogá",
+            "dataComprehension": "łoga"
         }
     }
 ]
