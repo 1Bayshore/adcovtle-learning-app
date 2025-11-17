@@ -3074,6 +3074,10 @@
             "word": "toron",
             "dataComprehension": "toron",
             "partOfSpeech": "noun"
+        },
+        "peküzhí Nakiwá": {
+            "word": "ki tólon",
+            "dataComprehension": "ki tolon"
         }
     },
     {
@@ -11584,6 +11588,11 @@
         "Wilakana": {
             "word": "lo",
             "dataComprehension": "lo"
+        },
+        "adcovtle": {
+            "word": "zir",
+            "dataComprehension": "zir",
+            "partOfSpeech": "noun"
         }
     },
     {
@@ -11593,6 +11602,11 @@
         "Wilakana": {
             "word": "lola",
             "dataComprehension": "lola"
+        },
+        "adcovtle": {
+            "word": "zir",
+            "dataComprehension": "zir",
+            "partOfSpeech": "noun"
         }
     },
     {
@@ -14532,6 +14546,178 @@
         "Jotanekasí": {
             "word": "łogá",
             "dataComprehension": "łoga"
+        }
+    },
+    {
+        "English": {
+            "word": "welcome"
+        },
+        "adcovtle": {
+            "word": "adangli",
+            "dataComprehension": "adangli",
+            "partOfSpeech": "interjection"
+        }
+    },
+    {
+        "English": {
+            "word": "steamer trunk"
+        },
+        "adcovtle": {
+            "word": "þovaðon",
+            "dataComprehension": "þovaðon",
+            "partOfSpeech": "noun",
+            "notes": "literally \"for the railway\""
+        }
+    },
+    {
+        "English": {
+            "word": "taste"
+        },
+        "adcovtle": {
+            "word": "epsante",
+            "dataComprehension": "epsante",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "flavour"
+        },
+        "adcovtle": {
+            "word": "epsante",
+            "dataComprehension": "epsante",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to know"
+        },
+        "adcovtle": {
+            "word": "asina",
+            "dataComprehension": "asina",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "paper"
+        },
+        "adcovtle": {
+            "word": "clanta",
+            "dataComprehension": "clanta",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "tomato"
+        },
+        "adcovtle": {
+            "word": "plicto",
+            "dataComprehension": "plicto",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "potato"
+        },
+        "adcovtle": {
+            "word": "tinap",
+            "dataComprehension": "tinap",
+            "partOfSpeech": "noun",
+            "notes": "assume yellow potato"
+        }
+    },
+    {
+        "English": {
+            "word": "red potato"
+        },
+        "adcovtle": {
+            "word": "tinap bliða",
+            "dataComprehension": "tinap bliða",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "sweet potato"
+        },
+        "adcovtle": {
+            "word": "jastlap",
+            "dataComprehension": "jastlap",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "smile"
+        },
+        "adcovtle": {
+            "word": "ticistá",
+            "dataComprehension": "ticista",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to smile"
+        },
+        "adcovtle": {
+            "word": "aticistá",
+            "dataComprehension": "aticista",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "to laugh"
+        },
+        "adcovtle": {
+            "word": "icistá",
+            "dataComprehension": "icista",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "laugh"
+        },
+        "adcovtle": {
+            "word": "cistá",
+            "dataComprehension": "cista",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "seriousness"
+        },
+        "adcovtle": {
+            "word": "peticistá",
+            "dataComprehension": "peticista",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to be serious"
+        },
+        "adcovtle": {
+            "word": "epeticistá",
+            "dataComprehension": "epeticista",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "to give"
+        },
+        "adcovtle": {
+            "word": "ado",
+            "dataComprehension": "ado",
+            "partOfSpeech": "verb"
         }
     }
 ]
