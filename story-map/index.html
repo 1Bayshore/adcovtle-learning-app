@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intital-scale=1">
+        <title>Story map</title>
+        <style>
+            body {
+                margin: 0px;
+            }
+            #background-img {
+                position: fixed;
+                height: auto;
+                max-height: 100%;
+                max-width: 100%;
+                top: 0%;
+            }
+
+            .story-points {
+                position: fixed;
+                visibility: hidden;
+            }
+
+            .story-points * {
+                position: absolute;
+                background-color: orange;
+                border-radius: 10px;
+                width: 10px;
+                height: 10px;
+                visibility: visible;
+            }
+
+            #mouse-pos {
+                position: fixed;
+                right: 8px;
+                top: 8px;
+            }
+
+            #other-maps {
+                position: fixed;
+                right: 8px;
+                bottom: 8px;
+            }
+
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="tiðloten_map_physical.svg" id="background-img">
+        <div class="story-points" id="tiðloten_map_physical">
+        </div>
+        <div class="story-points hidden" id="zhi_nakiwá_map_2112">
+            <a href="stories/si Shawéna zho ki yashí busé okedí.txt" style="left: 32.5%; top: 74%"></a>
+        </div>
+        <div id="mouse-pos"></div>
+        <div id="other-maps">
+            <p>List of maps:</p>
+            <p><a href="#" onclick="loadMap('tiðloten_map_physical')">Tiðloten (physical)</a></p>
+            <p><a href="#" onclick="loadMap('zhi_nakiwá_map_2112')">Zhi Nakiwá (2112)</a></p>
+        </div>
+        <script type="text/javascript">
+            document.onmousemove = function(e) {
+                document.getElementById('mouse-pos').innerText = "left: " + String(Math.round(1000*e.pageX/document.getElementById('background-img').clientWidth)/10) + "%; top: " + String(Math.round(1000*e.pageY/document.getElementById('background-img').clientHeight)/10) + "%";
+                document.getElementById('mouse-pos').style.color = "black";
+            }
+
+            document.getElementById('background-img').onclick = function() {
+                navigator.clipboard.writeText(document.getElementById('mouse-pos').innerText);
+                document.getElementById('mouse-pos').style.color = "green";
+                document.getElementById('mouse-pos').innerText += "\nLink copied!"
+            }
+
+            function loadMap(map) {
+                document.getElementById('background-img').src = map + '.svg';
+                setTimeout(finishLoadMap, 100, map)
+            }
+
+            function finishLoadMap(map) {
+                for (let i = 0; i < document.getElementsByClassName('story-points').length; i++) {
+                    if (document.getElementsByClassName('story-points')[i].id == map) {
+                        document.getElementsByClassName('story-points')[i].classList.remove('hidden');
+                        document.getElementsByClassName('story-points')[i].style.width = document.getElementById('background-img').clientWidth + 'px';
+                        document.getElementsByClassName('story-points')[i].style.height = document.getElementById('background-img').clientHeight + 'px';
+                    } else {
+                        document.getElementsByClassName('story-points')[i].classList.add('hidden');
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
