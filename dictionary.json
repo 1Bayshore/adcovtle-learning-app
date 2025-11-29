@@ -8359,6 +8359,11 @@
         "çyntoçana - 2000 BC": {
             "word": "røicy",
             "dataComprehension": "røicy"
+        },
+        "adcovtle": {
+            "word": "javte",
+            "dataComprehension": "javte",
+            "partOfSpeech": "noun"
         }
     },
     {
@@ -14718,6 +14723,36 @@
             "word": "ado",
             "dataComprehension": "ado",
             "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "ill, sick"
+        },
+        "adcovtle": {
+            "word": "ñoso",
+            "dataComprehension": "ñoso",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "oracle, fortune-teller (thing)"
+        },
+        "adcovtle": {
+            "word": "javte",
+            "dataComprehension": "javte",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "pen"
+        },
+        "adcovtle": {
+            "word": "clai",
+            "dataComprehension": "clai",
+            "partOfSpeech": "noun"
         }
     }
 ]
