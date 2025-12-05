@@ -14754,5 +14754,15 @@
             "dataComprehension": "clai",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "music"
+        },
+        "adcovtle": {
+            "word": "ñoful",
+            "dataComprehension": "ñoful",
+            "partOfSpeech": "noun"
+        }
     }
 ]
