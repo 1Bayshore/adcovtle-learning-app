@@ -14764,5 +14764,16 @@
             "dataComprehension": "ñoful",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "nostalgia seeker"
+        },
+        "adcovtle": {
+            "word": "vevej",
+            "dataComprehension": "vevej",
+            "partOfSpeech": "noun",
+            "notes": "pun on vini (explorer)"
+        }
     }
 ]
