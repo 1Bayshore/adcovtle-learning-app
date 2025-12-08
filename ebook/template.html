@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intital-scale=1">
+        <title>Learn Conlangs online!</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <script type="text/javascript" src="/all.js"></script>
+        <script type="text/javascript" src="/ebook/script.js"></script>
+        <div id="left-panel" class="hidden">
+            <div id="main-page-overlay" onclick="toggleLeftPanelVisibility()"></div>
+        </div>
+        <div class="left-panel-items">
+            <div id="home-link">
+                <a href="/index.html">Return home</a>
+            </div>
+            <div id="dictonary-link">
+                <a href="/dictionary.html">Open the dictionary</a>
+            </div>
+        </div>
+        <button id="menu-button" onclick="toggleLeftPanelVisibility()">Menu</button>
+        <div id="nav-buttons">
+            <button id="back-button" onclick="goBack()">←</button>
+            <button id="forward-button" onclick="goForward()">→</button>
+        </div>
+    </body>
+</html>
