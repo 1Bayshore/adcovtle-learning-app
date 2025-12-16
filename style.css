@@ -229,3 +229,16 @@ input {
     top: 0px;
     margin: 10px;
 }
+
+.title {
+    text-align: center;
+}
+
+#language-identifier {
+    position: fixed;
+    top: 0px;
+    right: 80px;
+    margin: 10px;
+    width: 100px;
+
+}

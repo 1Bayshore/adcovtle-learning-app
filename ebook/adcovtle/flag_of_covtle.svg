@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1000"
+   height="600"
+   viewBox="0 0 5 3"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="flag_of_covtle.svg"
+   inkscape:version="1.4 (e7c3feb, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.77787748"
+     inkscape:cx="469.22556"
+     inkscape:cy="354.81166"
+     inkscape:window-width="1536"
+     inkscape:window-height="887"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showgrid="false">
+    <inkscape:grid
+       id="grid1"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="0.050000001"
+       spacingy="0.050000001"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="false" />
+  </sodipodi:namedview>
+  <desc
+     id="desc1">Flag of Germany</desc>
+  <rect
+     id="gold_stripe"
+     width="5"
+     height="3"
+     y="0"
+     x="0"
+     fill="#ffcc00"
+     style="stroke-width:1.73205;fill:#ff8d00;fill-opacity:1"
+     inkscape:label="orange" />
+  <path
+     style="fill:#00e120;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="M 2.2510667,1.0021333 H 2.7489333 L 2.9978666,1.2510666 V 1.7489333 L 2.7489333,1.9978666 H 2.2510667 L 2.0021333,1.7489333 V 1.2510666 Z"
+     id="path1" />
+  <path
+     style="fill:#00e120;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="m 2.2510667,1.4004266 0.14936,-0.14936 h 0.1991465 l 0.14936,0.14936 v 0.1991467 l -0.14936,0.14936 H 2.4004266 l -0.14936,-0.14936 z"
+     id="path7" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="m 2.2510667,1.0021333 0.14936,0.2489333"
+     id="path8" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="M 2.5995732,1.2510666 2.7489333,1.0021333"
+     id="path9" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="m 2.7489333,1.4004266 0.2489333,-0.14936"
+     id="path10" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="m 2.7489333,1.5995733 0.2489333,0.14936"
+     id="path11" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="M 2.5995732,1.7489333 2.7489333,1.9978666"
+     id="path12" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="m 2.2510667,1.9978666 0.14936,-0.2489333"
+     id="path13" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="m 2.0021333,1.7489333 0.2489334,-0.14936"
+     id="path14" />
+  <path
+     style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.00426671;stroke-dasharray:none;stroke-opacity:1"
+     d="M 2.2510667,1.4004266 2.0021333,1.2510666"
+     id="path15" />
+</svg>
