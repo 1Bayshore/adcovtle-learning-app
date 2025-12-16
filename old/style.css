@@ -35,7 +35,6 @@ body {
     margin: 10px;
 }
 
-/*
 #user-login {
     font-size: smaller;
 }
@@ -43,7 +42,6 @@ body {
 #language-selection {
     font-size: smaller;
 }
-    */
 
 #main-page-overlay {
     position: fixed;
@@ -91,7 +89,6 @@ select:active {
     background-color: #b3b3b3;
 }
 
-/*
 #resetButton {
     background-color: red;
 }
@@ -99,14 +96,12 @@ select:active {
 #resetButton:active {
     background-color: darkred;
 }
-    
 
 #reset-button-container {
     padding: 10px;
     position: fixed;
     bottom: 0px;
 }
-    */
 
 input {
     background-color: #ffffff;
@@ -116,11 +111,10 @@ input {
     border-radius: 7px;
 }
 
-/*
 .incorrect {
     color: red;
 }
-    
+
 #boxBox {
     display: flex;
     justify-content: space-between;
@@ -135,7 +129,6 @@ input {
 .completed {
     background-color: #5be479;
 }
-    
 
 .draggableContainer {
     display: flex;
@@ -157,7 +150,6 @@ input {
 #exercise-image-container img {
     width: 100%;
 }
-    */
 
 
 #dictionary-results div {
@@ -173,7 +165,6 @@ input {
     display: block;
 }
 
-/*
 .term-container {
     display: flex;
     align-items: center;
@@ -221,7 +212,7 @@ input {
     font-size: inherit;
     border-radius: 7px;
     padding: 5px;
-}*/
+}
 
 #nav-buttons {
     position: fixed;
