@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intital-scale=1">
+        <title>Learn Conlangs online!</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <script type="text/javascript" src="../../all.js"></script>
+        <script type="text/javascript" src="../script.js"></script>
+        <div id="left-panel" class="hidden">
+            <div id="main-page-overlay" onclick="toggleLeftPanelVisibility()"></div>
+        </div>
+        <div class="left-panel-items">
+            <div id="home-link">
+                <a href="../../index.html">Return home</a>
+            </div>
+            <div id="dictonary-link">
+                <a href="../../dictionary.html">Open the dictionary</a>
+            </div>
+        </div>
+        <button id="menu-button" onclick="toggleLeftPanelVisibility()">Menu</button>
+        <div id="nav-buttons">
+            <button id="back-button" onclick="goBack()">←</button>
+            <button id="forward-button" onclick="goForward()">→</button>
+        </div>
+        <div id="language-identifier">
+            <img src="images/flag_of_covtle.svg" width="100%">
+        </div>
+        <div id="page-body">
+            <h2>Tedelañate þo va</h2>
+            <p>We've reached the end of the chapter! Now it's time to review what you've learned.</p>
+            <div class="exercise-area">
+                <p>
+                    Which of these letters is not in the Adcovtle alphabet?
+                    <br>
+                    <input type="radio" name="whichnot" value="w">
+                    <label id="whichnotw">w</label>
+                    <br>
+                    <input type="radio" name="whichnot" value="q">
+                    <label id="whichnotq">q</label>
+                    <br>
+                    <input type="radio" name="whichnot" value="h">
+                    <label id="whichnoth">h</label>
+                    <br>
+                    <input type="radio" name="whichnot" value="i">
+                    <label id="whichnoti">i</label>
+                </p>
+                <p>
+                    «Era» is...
+                    <br>
+                    <input type="radio" name="whichera" value="hello">
+                    <label id="whicherahello">hello</label>
+                    <br>
+                    <input type="radio" name="whichera" value="goodbye">
+                    <label id="whicheragoodbye">goodbye</label>
+                </p>
+                <p>
+                    «Ate» is...
+                    <br>
+                    <input type="radio" name="whichate" value="hello">
+                    <label id="whichatehello">hello</label>
+                    <br>
+                    <input type="radio" name="whichate" value="goodbye">
+                    <label id="whichategoodbye">goodbye</label>
+                </p>
+                <script type="text/javascript">
+                    function validateAnswers() {
+                        let whichNotValue = document.querySelector('input[name="whichnot"]:checked').value;
+                        if (whichNotValue == 'q') {
+                            // correct
+                            document.getElementById('whichnot' + whichNotValue).style = 'color: green';
+                        } else {
+                            // incorrect
+                            document.getElementById('whichnot' + whichNotValue).style = 'color: red';
+                        }
+
+                        let whichEraValue = document.querySelector('input[name="whichera"]:checked').value;
+                        if (whichEraValue == 'hello') {
+                            // correct
+                            document.getElementById('whichera' + whichEraValue).style = 'color: green';
+                        } else {
+                            // incorrect
+                            document.getElementById('whichera' + whichEraValue).style = 'color: red';
+                        }
+
+                        let whichAteValue = document.querySelector('input[name="whichate"]:checked').value;
+                        if (whichAteValue == 'goodbye') {
+                            // correct
+                            document.getElementById('whichate' + whichAteValue).style = 'color: green';
+                        } else {
+                            // incorrect
+                            document.getElementById('whichate' + whichAteValue).style = 'color: red';
+                        }
+                    }
+                </script>
+                <button onclick="validateAnswers()">Check answers</button>
+            </div>
+        </div>
+    </body>
+</html>
