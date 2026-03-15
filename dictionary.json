@@ -14775,5 +14775,15 @@
             "partOfSpeech": "noun",
             "notes": "pun on vini (explorer)"
         }
+    },
+    {
+        "English": {
+            "word": "term, semester"
+        },
+        "adcovtle": {
+            "word": "zitið",
+            "dataComprehension": "zitið",
+            "partOfSpeech": "noun"
+        }
     }
 ]
