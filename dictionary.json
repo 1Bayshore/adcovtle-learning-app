@@ -14785,5 +14785,25 @@
             "dataComprehension": "zitið",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "log"
+        },
+        "adcovtle": {
+            "word": "ðazol",
+            "dataComprehension": "ðazol",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "driftwood"
+        },
+        "adcovtle": {
+            "word": "ðazolát",
+            "dataComprehension": "ðazolat",
+            "partOfSpeech": "noun"
+        }
     }
 ]
