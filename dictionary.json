@@ -14805,5 +14805,15 @@
             "dataComprehension": "ðazolat",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "hollow"
+        },
+        "adcovtle": {
+            "word": "oðla",
+            "dataComprehension": "oðla",
+            "partOfSpeech": "adjective"
+        }
     }
 ]
