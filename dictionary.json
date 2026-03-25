@@ -14815,5 +14815,15 @@
             "dataComprehension": "oðla",
             "partOfSpeech": "adjective"
         }
+    },
+    {
+        "English": {
+            "word": "required"
+        },
+        "adcovtle": {
+            "word": "ñedful",
+            "dataComprehension": "ñedful",
+            "partOfSpeech": "adjective"
+        }
     }
 ]
