@@ -14825,5 +14825,15 @@
             "dataComprehension": "ñedful",
             "partOfSpeech": "adjective"
         }
+    },
+    {
+        "English": {
+            "word": "amethyst"
+        },
+        "adcovtle": {
+            "word": "lilañuþod",
+            "dataComprehension": "lilañuþod",
+            "partOfSpeech": "noun"
+        }
     }
 ]
