@@ -14835,5 +14835,36 @@
             "dataComprehension": "lilañuþod",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "culture"
+        },
+        "adcovtle": {
+            "word": "icalev",
+            "dataComprehension": "icalev",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "follower"
+        },
+        "adcovtle": {
+            "word": "icalev",
+            "dataComprehension": "icalev",
+            "partOfSpeech": "noun",
+            "notes": "of a religion or philosophy"
+        }
+    },
+    {
+        "English": {
+            "word": "people (society)"
+        },
+        "adcovtle": {
+            "word": "icalev",
+            "dataComprehension": "icalev",
+            "partOfSpeech": "noun"
+        }
     }
 ]
