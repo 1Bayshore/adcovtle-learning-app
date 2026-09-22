@@ -14872,9 +14872,39 @@
             "word": "academic journal"
         },
         "adcovtle": {
-            "word": "leafil ad lacapit"
+            "word": "leafil ad lacapit",
             "dataComprehension": "leafil ad lacapit",
             "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "metal"
+        },
+        "adcovtle": {
+            "word": "tetacþá",
+            "dataComprehension": "tetacþa",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "metalic"
+        },
+        "adcovtle": {
+            "word": "tetacþáni",
+            "dataComprehension": "tetacþani",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "with a scraping sound"
+        },
+        "adcovtle": {
+            "word": "tetacþáni",
+            "dataComprehension": "tetacþani",
+            "partOfSpeech": "adverb"
         }
     }
 ]
