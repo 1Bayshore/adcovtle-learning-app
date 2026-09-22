@@ -13196,6 +13196,11 @@
         "peküzhí Nakiwá": {
             "word": "igádu",
             "dataComprehension": "igadu"
+        },
+        "adcovtle": {
+            "word": "psipi",
+            "dataComprehension": "psipi",
+            "partOfSpeech": "adjective"
         }
     },
     {
@@ -14905,6 +14910,137 @@
             "word": "tetacþáni",
             "dataComprehension": "tetacþani",
             "partOfSpeech": "adverb"
+        }
+    },
+    {
+        "English": {
+            "word": "to fall off"
+        },
+        "adcovtle": {
+            "word": "atolio",
+            "dataComprehension": "atolio",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "grey"
+        },
+        "adcovtle": {
+            "word": "zesbe",
+            "dataComprehension": "zesbe",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "to fade"
+        },
+        "adcovtle": {
+            "word": "azesbe",
+            "dataComprehension": "azesbe",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "sign"
+        },
+        "adcovtle": {
+            "word": "naþod",
+            "dataComprehension": "naþod",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "sign"
+        },
+        "adcovtle": {
+            "word": "naþod",
+            "dataComprehension": "naþod",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "door"
+        },
+        "adcovtle": {
+            "word": "danca",
+            "dataComprehension": "danca",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "container"
+        },
+        "adcovtle": {
+            "word": "ðulsan",
+            "dataComprehension": "ðulsan",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "bin"
+        },
+        "adcovtle": {
+            "word": "ðulsan ave",
+            "dataComprehension": "ðulsan ave",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "chest (container)"
+        },
+        "adcovtle": {
+            "word": "ðulsan pave",
+            "dataComprehension": "ðulsan pave",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "near"
+        },
+        "adcovtle": {
+            "word": "ðlonc",
+            "dataComprehension": "ðlonc",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "far"
+        },
+        "adcovtle": {
+            "word": "ðla",
+            "dataComprehension": "ðla",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "wood"
+        },
+        "adcovtle": {
+            "word": "telpse",
+            "dataComprehension": "telpse",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "dress"
+        },
+        "adcovtle": {
+            "word": "baðéra",
+            "dataComprehension": "baðera",
+            "partOfSpeech": "noun",
+            "notes": "from «baða dera»"
         }
     }
 ]
