@@ -15154,5 +15154,15 @@
             "dataComprehension": "igio",
             "partOfSpeech": "verb"
         }
+    },
+    {
+        "English": {
+            "word": "meaning"
+        },
+        "adcovtle": {
+            "word": "þodase",
+            "dataComprehension": "þodase",
+            "partOfSpeech": "noun"
+        }
     }
 ]
