@@ -15042,5 +15042,117 @@
             "partOfSpeech": "noun",
             "notes": "from «baða dera»"
         }
+    },
+    {
+        "English": {
+            "word": "wheat"
+        },
+        "adcovtle": {
+            "word": "hanit",
+            "dataComprehension": "hanit",
+            "partOfSpeech": "noun"
+        },
+        "Senta Grèstilsa": {
+            "word": "xanyt",
+            "dataComprehension": "xanyt"
+        },
+        "Mēeu Gēo": {
+            "word": "isāi",
+            "dataComprehension": "isāi"
+        }
+    },
+    {
+        "English": {
+            "word": "potato flour"
+        },
+        "adcovtle": {
+            "word": "psehafri",
+            "dataComprehension": "psehafri",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "rice flour"
+        },
+        "adcovtle": {
+            "word": "psehafri ad lazir",
+            "dataComprehension": "psehafri ad lazir",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "flour (wheat)"
+        },
+        "adcovtle": {
+            "word": "psehafri ad lahanit",
+            "dataComprehension": "psehafri ad lahanit",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "peach"
+        },
+        "adcovtle": {
+            "word": "zeliju",
+            "dataComprehension": "zeliju",
+            "partOfSpeech": "noun"
+        },
+        "Šelva Enkan": {
+            "word": "želidyu",
+            "dataComprehension": "želidyu"
+        }
+    },
+    {
+        "English": {
+            "word": "to take"
+        },
+        "adcovtle": {
+            "word": "uðna",
+            "dataComprehension": "uðna",
+            "partOfSpeech": "verb"
+        }
+    },
+    {
+        "English": {
+            "word": "having the quantity of"
+        },
+        "adcovtle": {
+            "word": "ze",
+            "dataComprehension": "ze",
+            "partOfSpeech": "preposition"
+        }
+    },
+    {
+        "English": {
+            "word": "sweet"
+        },
+        "adcovtle": {
+            "word": "þaice",
+            "dataComprehension": "þaice",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "fruit"
+        },
+        "adcovtle": {
+            "word": "ilica þaice",
+            "dataComprehension": "ilica þaice",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "to touch"
+        },
+        "adcovtle": {
+            "word": "igio",
+            "dataComprehension": "igio",
+            "partOfSpeech": "verb"
+        }
     }
 ]
