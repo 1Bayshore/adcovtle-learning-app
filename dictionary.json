@@ -15164,5 +15164,25 @@
             "dataComprehension": "þodase",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "flat"
+        },
+        "adcovtle": {
+            "word": "tafri",
+            "dataComprehension": "tafri",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "steep"
+        },
+        "adcovtle": {
+            "word": "tipi",
+            "dataComprehension": "tipi",
+            "partOfSpeech": "adjective"
+        }
     }
 ]
