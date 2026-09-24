@@ -8936,6 +8936,11 @@
         "çyntoçana - 2000 BC": {
             "word": "zuzo",
             "dataComprehension": "zuzo"
+        },
+        "adcovtle": {
+            "word": "solve",
+            "dataComprehension": "solve",
+            "partOfSpeech": "noun"
         }
     },
     {
@@ -15183,6 +15188,76 @@
             "word": "tipi",
             "dataComprehension": "tipi",
             "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "sugar"
+        },
+        "adcovtle": {
+            "word": "tluzce",
+            "dataComprehension": "tluzce",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "I understand (filler word)"
+        },
+        "adcovtle": {
+            "word": "mabec",
+            "dataComprehension": "mabec",
+            "partOfSpeech": "filler word"
+        }
+    },
+    {
+        "English": {
+            "word": "dead"
+        },
+        "adcovtle": {
+            "word": "clop",
+            "dataComprehension": "clop",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "surprise, shock"
+        },
+        "adcovtle": {
+            "word": "loteñadli",
+            "dataComprehension": "loteñadli",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "leaf"
+        },
+        "adcovtle": {
+            "word": "platlin",
+            "dataComprehension": "platlin",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "needle (of a tree)"
+        },
+        "adcovtle": {
+            "word": "psucla",
+            "dataComprehension": "psucla",
+            "partOfSpeech": "noun"
+        }
+    },
+    {
+        "English": {
+            "word": "outlaw"
+        },
+        "adcovtle": {
+            "word": "þopblúi",
+            "dataComprehension": "þopblui",
+            "partOfSpeech": "noun"
         }
     }
 ]
