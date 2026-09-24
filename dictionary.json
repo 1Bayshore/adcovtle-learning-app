@@ -15259,5 +15259,25 @@
             "dataComprehension": "þopblui",
             "partOfSpeech": "noun"
         }
+    },
+    {
+        "English": {
+            "word": "alone"
+        },
+        "adcovtle": {
+            "word": "blaslo",
+            "dataComprehension": "blaslo",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "lonely"
+        },
+        "adcovtle": {
+            "word": "tiblaslo",
+            "dataComprehension": "tiblaslo",
+            "partOfSpeech": "adjective"
+        }
     }
 ]
