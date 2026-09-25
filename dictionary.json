@@ -15279,5 +15279,25 @@
             "dataComprehension": "tiblaslo",
             "partOfSpeech": "adjective"
         }
+    },
+    {
+        "English": {
+            "word": "favourite"
+        },
+        "adcovtle": {
+            "word": "sabena",
+            "dataComprehension": "sabena",
+            "partOfSpeech": "adjective"
+        }
+    },
+    {
+        "English": {
+            "word": "potion"
+        },
+        "adcovtle": {
+            "word": "elica",
+            "dataComprehension": "elica",
+            "partOfSpeech": "noun"
+        }
     }
 ]
